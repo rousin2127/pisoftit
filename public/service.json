@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Web App Solutions",
+        "icon": "BiLayout",
+        "description": "Custom enterprise-grade web applications tailored to streamline your business operations and workflows.",
+        "tags": [
+            "Enterprise Integration",
+            "Cloud-Native Architecture"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "E-commerce Development",
+        "icon": "BiCart",
+        "description": "Scalable and secure online storefronts designed to maximize conversions and enhance user shopping experiences.",
+        "tags": [
+            "Enterprise Integration",
+            "Cloud-Native Architecture"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Corporate Web Design",
+        "icon": "BiGlobe",
+        "description": "Professional IT and corporate websites that build trust and communicate your brand value effectively.",
+        "tags": [
+            "Enterprise Integration",
+            "Cloud-Native Architecture"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "POS Software Management",
+        "icon": "BiDesktop",
+        "description": "Subscription-based POS machine software management solutions for retail and hospitality sectors.",
+        "tags": [
+            "Enterprise Integration",
+            "Cloud-Native Architecture"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "ML & Deep Learning",
+        "icon": "BiChip",
+        "description": "Innovative AI projects involving Machine Learning and Deep Learning to drive data-centric decisions.",
+        "tags": [
+            "Enterprise Integration",
+            "Cloud-Native Architecture"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Python Flask API Development",
+        "icon": "BiLogoPython",
+        "description": "Robust backend development using Python Flask for high-performance APIs and microservices.",
+        "tags": [
+            "Enterprise Integration",
+            "Cloud-Native Architecture"
+        ]
+    }
+]
