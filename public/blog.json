@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Building Scalable Web Apps with React",
+    "excerpt": "How we design frontend architecture that grows with your business without costly rewrites.",
+    "category": "Web Development",
+    "date": "May 12, 2026",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 2,
+    "title": "POS Systems for Modern Retail",
+    "excerpt": "Key features every subscription-based POS platform needs for inventory, billing, and reporting.",
+    "category": "Enterprise",
+    "date": "Apr 28, 2026",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 3,
+    "title": "Machine Learning in Production",
+    "excerpt": "From prototype to deployment: best practices for ML pipelines and model monitoring.",
+    "category": "AI / ML",
+    "date": "Apr 10, 2026",
+    "readTime": "8 min read"
+  },
+  {
+    "id": 4,
+    "title": "API Design with Python Flask",
+    "excerpt": "RESTful patterns, authentication, and performance tips for backend microservices.",
+    "category": "Backend",
+    "date": "Mar 22, 2026",
+    "readTime": "7 min read"
+  }
+]

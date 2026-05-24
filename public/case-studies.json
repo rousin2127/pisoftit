@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Retail POS Platform",
+    "industry": "Retail",
+    "summary": "Subscription-based POS management for multi-branch stores with real-time inventory sync.",
+    "results": ["40% faster checkout", "Unified reporting across 12 branches"],
+    "tech": ["React", "Spring Boot", "PostgreSQL"]
+  },
+  {
+    "id": 2,
+    "title": "E-commerce Storefront",
+    "industry": "E-commerce",
+    "summary": "High-conversion online store with secure payments and admin dashboard for catalog management.",
+    "results": ["2.3x conversion uplift", "99.9% uptime after launch"],
+    "tech": ["React", "Node.js", "MongoDB"]
+  },
+  {
+    "id": 3,
+    "title": "Corporate IT Portal",
+    "industry": "Corporate",
+    "summary": "Brand-focused corporate website with CMS-friendly structure and performance optimization.",
+    "results": ["60% faster page loads", "Improved lead generation"],
+    "tech": ["React", "Tailwind", "Vite"]
+  },
+  {
+    "id": 4,
+    "title": "ML Demand Forecasting",
+    "industry": "Analytics",
+    "summary": "Deep learning pipeline for sales forecasting integrated with existing ERP workflows.",
+    "results": ["18% inventory cost reduction", "Automated weekly forecasts"],
+    "tech": ["Python", "TensorFlow", "Flask API"]
+  }
+]
