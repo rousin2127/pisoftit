@@ -6,13 +6,13 @@ import { MdOutlineLocationOn } from 'react-icons/md';
 const Footer = () => {
     return (
         <footer className="bg-slate-50  text-slate-600 pt-16 pb-8 ">
-            {/* Top Section: 4 Column Grid Layout */}
+           
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
-                {/* Column 1: Logo & About */}
+                
                 <div className="space-y-6">
                     <div className="flex items-center gap-2">
-                        {/* Logo Box */}
+                        
                         <div className="bg-blue-600 text-white font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-lg shadow-sm">
                             P
                         </div>
@@ -23,7 +23,7 @@ const Footer = () => {
                     <p className="text-sm leading-relaxed text-slate-500 max-w-xs">
                         Engineering reliable software for modern businesses.
                     </p>
-                    {/* Social Media Icons */}
+                    
                     <div className="flex gap-3 pt-2">
                         <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-200/60 hover:bg-blue-600 hover:text-white text-slate-600 transition-colors duration-200">
                             <AiOutlineTwitter className="text-lg" />
@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Column 2: Quick Links */}
+               
                 <div>
                     <h4 className="text-slate-800 font-bold text-base mb-6">Quick Links</h4>
                     <ul className="space-y-4 text-sm">
@@ -51,7 +51,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Column 3: Contact Us */}
+               
                 <div>
                     <h4 className="text-slate-800 font-bold text-base mb-6">Contact Us</h4>
                     <ul className="space-y-5 text-sm">
@@ -72,7 +72,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Column 4: Newsletter */}
+               
                 <div className="space-y-4">
                     <h4 className="text-slate-800 font-bold text-base mb-6">Newsletter</h4>
                     <p className="text-sm leading-relaxed text-slate-500">
@@ -92,7 +92,7 @@ const Footer = () => {
 
             </div>
 
-            {/* Bottom Section: Copyright Line */}
+           
             <div className="max-w-7xl mx-auto border-t border-slate-200/80 pt-8 text-center text-xs text-slate-400 font-medium">
                 © 2026 PAISOFT IT. All rights reserved.
             </div>

@@ -7,7 +7,7 @@ import { HiOutlineArrowSmRight } from 'react-icons/hi';
 
 const Ser = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
             {services.map(service => {
                 {/* 2. service.iconName er bodole service.icon likhun, karon JSON-e "icon" lekha */ }
                 const IconComponent = BoxIcons[service.icon];
