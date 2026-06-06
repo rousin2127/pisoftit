@@ -7,7 +7,7 @@ const CaseStudy = () => {
     const studies = useLoaderData();
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
+        <div className="max-w-6xl mx-auto px-4 py-12 lg:py-16">
             <div className="mb-14 space-y-4 max-w-3xl">
                 <span className="inline-block bg-[#e0f0ff] text-[#0060c1] text-xs font-semibold px-4 py-1.5 rounded-full">
                     Success Stories

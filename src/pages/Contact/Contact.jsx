@@ -15,7 +15,7 @@ const Contact = () => {
 
   return (
     <div className="pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl mb-16 reveal">
           <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
             Let&apos;s build your <span className="text-brand-600">next big thing</span> together.
@@ -103,7 +103,7 @@ const Contact = () => {
                       <input
                         required
                         type="text"
-                        placeholder="John Doe"
+                        placeholder="Name"
                         className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-brand-500/50"
                       />
                     </div>
@@ -114,7 +114,7 @@ const Contact = () => {
                       <input
                         required
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="user@example.com"
                         className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-brand-500/50"
                       />
                     </div>

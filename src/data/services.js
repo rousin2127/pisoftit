@@ -33,7 +33,7 @@ export const services = [
   },
   {
     id: '5',
-    title: 'ML & Deep Learning',
+    title: 'ERP Solution',
     description:
       'Innovative AI projects involving Machine Learning and Deep Learning to drive data-centric decisions.',
     icon: 'Cpu',
@@ -41,7 +41,7 @@ export const services = [
   },
   {
     id: '6',
-    title: 'Python Flask API Development',
+    title: 'Mobile APP Development',
     description:
       'Robust backend development using Python Flask for high-performance APIs and microservices.',
     icon: 'Terminal',

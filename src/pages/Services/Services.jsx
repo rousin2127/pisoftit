@@ -33,7 +33,7 @@ const Services = () => {
 
   return (
     <div className="pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl mb-20 reveal">
           <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-8">
             Comprehensive <span className="text-brand-600">IT Solutions</span>

@@ -3,20 +3,16 @@ import { Link } from 'react-router';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { AiOutlineTwitter, AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
 import { siteConfig } from '../../config/site';
+import Logo from '../shared/Logo/Logo';
 
 const Footer = () => {
   return (
     <footer className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-brand-600 rounded-md flex items-center justify-center text-white font-bold">
-                P
-              </div>
-              <span className="text-xl font-bold dark:text-white">
-                PAISOFT <span className="text-brand-600">IT</span>
-              </span>
+              <Logo></Logo>
             </Link>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               {siteConfig.tagline}

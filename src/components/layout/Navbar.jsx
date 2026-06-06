@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { siteConfig } from '../../config/site';
+import Logo from '../shared/Logo/Logo';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -37,27 +38,27 @@ const Navbar = () => {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <Link
           to="/"
           onClick={closeMobile}
           className="flex items-center gap-2 group"
         >
-          <div className="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform">
-            P
+          <div className=" h-10  rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform">
+            <Logo></Logo>
           </div>
-          <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+          {/* <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
             PAISOFT <span className="text-brand-600">IT</span>
-          </span>
+          </span> */}
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-12">
           {siteConfig.navigation.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
+                `text-lg font-medium transition-colors ${
                   isActive
                     ? 'text-brand-600 dark:text-brand-500'
                     : 'text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-500'
@@ -70,7 +71,7 @@ const Navbar = () => {
           <button
             type="button"
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-brand-600 transition-all"
+            className="p-2 rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-brand-600 transition-all cursor-pointer"
             aria-label="Toggle Theme"
           >
             {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}

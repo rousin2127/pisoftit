@@ -11,13 +11,27 @@ export const router = createHashRouter([
     path: '/',
     element: <RootLayouts />,
     children: [
-      { index: true, element: <Home /> },
-      { path: 'services', element: <Services /> },
-      { path: 'case-studies', element: <CaseStudies /> },
-      { path: 'about', element: <About /> },
-      { path: 'blog', element: <Home /> },
-      { path: 'contact', element: <Contact /> },
-      { path: '*', element: <Navigate to="/" replace /> },
+      { index: true, 
+        element: <Home /> 
+      },
+      { path: 'services', 
+        element: <Services /> 
+      },
+      { path: 'case-studies', 
+        element: <CaseStudies /> 
+      },
+      { path: 'about', 
+        element: <About /> 
+      },
+      { path: 'blog', 
+        element: <Home /> 
+      },
+      { path: 'contact', 
+        element: <Contact /> 
+      },
+      { path: '*', 
+        element: <Navigate to="/" replace /> 
+      },
     ],
   },
 ]);

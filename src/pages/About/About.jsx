@@ -1,13 +1,14 @@
 import React from 'react';
 import { siteConfig } from '../../config/site';
 import useScrollReveal from '../../hooks/useScrollReveal';
+import Vision from "../../assets/vision.png"
 
 const About = () => {
   useScrollReveal();
 
   return (
     <div className="pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl mb-16 reveal">
           <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-8">
             Engineering Reliability Since Inception.
@@ -22,7 +23,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-center">
           <div className="reveal">
             <img
-              src="https://picsum.photos/800/600"
+              src={Vision}
               alt="Office"
               className="rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800"
             />

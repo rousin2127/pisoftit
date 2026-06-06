@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "title": "Corporate Web Design",
+        "title": "Corporate Web Development",
         "icon": "BiGlobe",
         "description": "Professional IT and corporate websites that build trust and communicate your brand value effectively.",
         "tags": [
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "title": "ML & Deep Learning",
+        "title": "ERP Solution",
         "icon": "BiChip",
         "description": "Innovative AI projects involving Machine Learning and Deep Learning to drive data-centric decisions.",
         "tags": [
@@ -51,7 +51,7 @@
     },
     {
         "id": 6,
-        "title": "Python Flask API Development",
+        "title": "Mobile app  Development",
         "icon": "BiLogoPython",
         "description": "Robust backend development using Python Flask for high-performance APIs and microservices.",
         "tags": [

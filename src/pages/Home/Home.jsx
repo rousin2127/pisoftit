@@ -4,17 +4,18 @@ import { ArrowRight, Shield, Zap } from 'lucide-react';
 import { services } from '../../data/services';
 import { getServiceIcon } from '../../utils/serviceIcons';
 import useScrollReveal from '../../hooks/useScrollReveal';
+import Hero from '../../assets/hero.png'
 
 const Home = () => {
   useScrollReveal();
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col  mx-auto">
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-white dark:from-slate-950 dark:to-slate-900 -z-10" />
         <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-500/10 blur-[120px] rounded-full -z-10 animate-pulse" />
 
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto pt-15 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="reveal">
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-brand-600 bg-brand-100 dark:bg-brand-900/30 rounded-full">
               Leading IT Innovation
@@ -44,12 +45,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="relative reveal hidden lg:block">
-            <div className="aspect-square bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-300 dark:border-slate-700">
+          <div className="relative  lg:block">
+            <div className="rounded-xl overflow-hidden  relative isolate">
               <img
-                src="https://picsum.photos/800/800?grayscale"
+                src={Hero}
                 alt="Team at work"
-                className="w-full h-full object-cover opacity-60 mix-blend-overlay"
+                className="w-full h-full "
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
             </div>
@@ -62,7 +63,7 @@ const Home = () => {
       </section>
 
       <section className="py-24 bg-white dark:bg-slate-950">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 reveal">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 dark:text-white">
               World-class IT Solutions
@@ -103,7 +104,7 @@ const Home = () => {
       </section>
 
       <section className="py-24 bg-slate-50 dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="reveal">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 dark:text-white leading-tight">
