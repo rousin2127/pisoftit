@@ -34,8 +34,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white dark:bg-slate-950/80 backdrop-blur-md shadow-sm py-8'
+          : 'bg-transparent py-10 '
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
@@ -44,7 +44,7 @@ const Navbar = () => {
           onClick={closeMobile}
           className="flex items-center gap-2 group"
         >
-          <div className=" h-10  rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform">
+          <div className=" h-10  rounded-lg flex items-center justify-center text-white font-bold  group-hover:scale-105 transition-transform">
             <Logo></Logo>
           </div>
           {/* <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
@@ -58,7 +58,7 @@ const Navbar = () => {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `text-lg font-medium transition-colors ${
+                `text-xl font-medium transition-colors ${
                   isActive
                     ? 'text-brand-600 dark:text-brand-500'
                     : 'text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-500'

@@ -2,16 +2,27 @@ import React from 'react';
 import { Link } from 'react-router';
 import { ArrowRight, Shield, Zap } from 'lucide-react';
 import { services } from '../../data/services';
+
 import { getServiceIcon } from '../../utils/serviceIcons';
 import useScrollReveal from '../../hooks/useScrollReveal';
-import Hero from '../../assets/hero.png'
+import Hero from './hero/Hero';
+import AboutUs from './about/AboutUs';
+import AboutCompany from './about/AboutCompany';
+import Support from './support/Support';
+import Team from './team/Team';
+//  import Hero from '../../assets/hero.png';
+// import Herobg from '../../assets/banner_bg.jpg';
 
 const Home = () => {
   useScrollReveal();
 
   return (
-    <div className="flex flex-col  mx-auto">
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <div className="flex flex-col  mx-auto ">
+      {/* <section className="relative  flex items-center pt-20 overflow-hidden"
+        style={{
+          backgroundImage: `url(${Herobg})`,
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-white dark:from-slate-950 dark:to-slate-900 -z-10" />
         <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-500/10 blur-[120px] rounded-full -z-10 animate-pulse" />
 
@@ -28,7 +39,7 @@ const Home = () => {
               We specialize in high-performance web applications, machine learning projects, and
               enterprise POS solutions that empower modern enterprises.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 my-5">
               <Link
                 to="/services"
                 className="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-semibold shadow-lg shadow-brand-600/20 flex items-center gap-2 group transition-all"
@@ -60,7 +71,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Hero></Hero>
+     
+     <AboutUs/>
+     <AboutCompany/>
 
       <section className="py-24 bg-white dark:bg-slate-950">
         <div className="max-w-6xl mx-auto px-6">
@@ -103,7 +119,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-slate-50 dark:bg-slate-900">
+      {/* <section className="py-24 bg-slate-50 dark:bg-slate-900">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="reveal">
@@ -169,8 +185,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
-
+      </section> */}
+      <Support></Support>
+        <Team></Team>
       <section className="py-24 bg-brand-600">
         <div className="max-w-7xl mx-auto px-6 text-center reveal">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">

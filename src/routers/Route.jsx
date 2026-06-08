@@ -5,6 +5,8 @@ import Services from '../pages/Services/Services';
 import About from '../pages/About/About';
 import CaseStudies from '../pages/CaseStudy/CaseStudies';
 import Contact from '../pages/Contact/Contact';
+import CaseStudy from '../pages/CaseStudy/CaseStudy';
+
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +21,9 @@ export const router = createBrowserRouter([
       },
       { path: 'case-studies', 
         element: <CaseStudies /> 
+      },
+      { path: 'case-studies/:id', 
+        element: <CaseStudy></CaseStudy> 
       },
       { path: 'about', 
         element: <About /> 

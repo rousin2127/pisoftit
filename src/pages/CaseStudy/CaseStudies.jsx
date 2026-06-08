@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ExternalLink, Tag } from 'lucide-react';
 import { caseStudies } from '../../data/caseStudies';
 import useScrollReveal from '../../hooks/useScrollReveal';
+import { Link } from 'react-router';
 
 const CaseStudies = () => {
   useScrollReveal();
@@ -65,13 +66,13 @@ const CaseStudies = () => {
                   <h3 className="text-3xl font-bold dark:text-white group-hover:text-brand-600 transition-colors">
                     {study.title}
                   </h3>
-                  <button
-                    type="button"
+                  <Link
+                    to={`/case-studies/${study.id}`}
                     className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-brand-600 hover:text-white transition-all"
                     aria-label="View case study"
                   >
                     <ExternalLink className="w-5 h-5" />
-                  </button>
+                  </Link>
                 </div>
                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                   {study.description}
