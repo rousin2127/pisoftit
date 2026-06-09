@@ -1,48 +1,67 @@
+import bannerImg from '../assets/banner_0004.jpg';
+import teamImg from '../assets/team.jpg';
+import inrImg from '../assets/inr_02.jpg';
+import bannerBg from '../assets/banner_bg.jpg';
+
 export const caseStudies = [
   {
     id: '1',
-    title: 'Global Logistics Dashboard',
+    title: 'Enterprise Web Application',
     category: 'Web App',
     description:
-      'A real-time tracking and resource management system for a Fortune 500 logistics firm.',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-    slug: 'global-logistics-dashboard',
-    client: 'LogiCorp International',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
+      'Custom web application built for a growing business to manage operations, reporting, and team workflows from a single dashboard.',
+    image: bannerImg,
+    client: 'Confidential Client',
+    technologies: ['React', 'Spring Boot', 'PostgreSQL'],
+    results: [
+      'Centralized business operations in one platform',
+      'Reduced manual reporting time significantly',
+      'Scalable architecture for future modules',
+    ],
   },
   {
     id: '2',
-    title: 'NexGen E-commerce Platform',
+    title: 'E-commerce Store Development',
     category: 'E-commerce',
-    description: 'High-performance headless commerce solution with sub-second page loads.',
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    slug: 'nexgen-ecommerce',
-    client: 'RetailHub',
-    technologies: ['Next.js', 'Shopify Plus', 'Tailwind', 'Vercel'],
+    description:
+      'Full-featured online store with product catalog, secure checkout, order management, and admin panel for inventory control.',
+    image: inrImg,
+    client: 'Retail Business',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    results: [
+      'Mobile-responsive shopping experience',
+      'Secure payment and order tracking',
+      'Admin dashboard for product management',
+    ],
   },
   {
     id: '3',
-    title: 'Predictive Inventory Engine',
-    category: 'AI / ML',
+    title: 'POS Software Management',
+    category: 'POS Software',
     description:
-      'Deep learning model that reduced stockouts by 45% using historical sales data.',
-    image:
-      'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=800',
-    slug: 'predictive-inventory',
-    client: 'SupplyChain Pro',
-    technologies: ['Python', 'TensorFlow', 'Flask', 'AWS'],
+      'Subscription-based POS management system for retail outlets with billing, inventory sync, and multi-branch reporting.',
+    image: teamImg,
+    client: 'Retail & Hospitality',
+    technologies: ['React', 'Java', 'PostgreSQL'],
+    results: [
+      'Real-time inventory across branches',
+      'Automated billing and receipt generation',
+      'Cloud-based subscription management',
+    ],
   },
   {
     id: '4',
-    title: 'Smart POS Cloud',
-    category: 'POS Software',
-    description: 'A multi-tenant SaaS POS system designed for large restaurant chains.',
-    image:
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800',
-    slug: 'smart-pos-cloud',
-    client: 'QuickBite Group',
-    technologies: ['React Native', 'Firebase', 'Stripe', 'Node.js'],
+    title: 'Corporate IT Website',
+    category: 'Web Design',
+    description:
+      'Professional corporate website with modern design, fast performance, and CMS-friendly structure for content updates.',
+    image: bannerBg,
+    client: 'IT & Corporate Sector',
+    technologies: ['React', 'Tailwind CSS', 'Vite'],
+    results: [
+      'Improved brand presence online',
+      'Fast page load and mobile optimization',
+      'Easy content management for the client team',
+    ],
   },
 ];

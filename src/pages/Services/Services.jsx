@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { services } from '../../data/services';
 import { getServiceIcon } from '../../utils/serviceIcons';
-import useScrollReveal from '../../hooks/useScrollReveal';
+import GradientMesh from '../../components/ui/GradientMesh';
 
 const steps = [
   {
@@ -29,16 +29,15 @@ const steps = [
 ];
 
 const Services = () => {
-  useScrollReveal();
-
   return (
-    <div className="pt-32 pb-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-3xl mb-20 reveal">
-          <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-8">
-            Comprehensive <span className="text-brand-600">IT Solutions</span>
+    <div className="py-24 relative overflow-hidden">
+      <GradientMesh className="opacity-50" />
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mb-20 reveal-left">
+          <h1 className="text-h1 text-slate-900 dark:text-white mb-4">
+            Comprehensive <span className="gradient-text">IT Solutions</span>
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p className="text-body text-slate-600 dark:text-slate-400">
             We deliver end-to-end software engineering services, helping organizations modernize
             their technology stacks and optimize business processes.
           </p>
@@ -50,7 +49,7 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="reveal p-10 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-brand-500/10 transition-all group"
+                className="reveal card-stripe p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="w-14 h-14 bg-brand-50 dark:bg-brand-900/20 text-brand-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
@@ -75,19 +74,19 @@ const Services = () => {
           })}
         </div>
 
-        <div className="bg-slate-50 dark:bg-slate-900 rounded-[40px] p-12 lg:p-20 reveal">
+        <div className="bg-slate-50 dark:bg-slate-900 rounded-[40px] p-12 lg:p-20 reveal-scale border border-slate-100 dark:border-slate-800">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold dark:text-white mb-4">
+            <h2 className="text-h2 dark:text-white mb-4">
               Our Engineering Process
             </h2>
-            <p className="text-slate-600 dark:text-slate-400">
+            <p className="text-body text-slate-600 dark:text-slate-400">
               How we turn complex requirements into reliable products.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {steps.map((step, index) => (
               <div key={step.title} className="relative">
-                <div className="text-5xl font-black text-brand-600/10 mb-4">{index + 1}</div>
+                <div className="text-3xl font-black text-brand-600/10 mb-4">{index + 1}</div>
                 <h4 className="text-lg font-bold dark:text-white mb-2">{step.title}</h4>
                 <p className="text-sm text-slate-600 dark:text-slate-400">{step.desc}</p>
                 {index < steps.length - 1 && (
@@ -103,7 +102,7 @@ const Services = () => {
         <div className="mt-24 text-center reveal">
           <Link
             to="/contact"
-            className="inline-flex items-center px-10 py-5 bg-brand-600 hover:bg-brand-700 text-white rounded-2xl font-bold text-lg shadow-xl shadow-brand-600/20 transition-all"
+            className="btn-stripe inline-flex items-center px-10 py-5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg shine-hover"
           >
             Start a Project Consultation
           </Link>

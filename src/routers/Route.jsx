@@ -4,39 +4,23 @@ import Home from '../pages/Home/Home';
 import Services from '../pages/Services/Services';
 import About from '../pages/About/About';
 import CaseStudies from '../pages/CaseStudy/CaseStudies';
-import Contact from '../pages/Contact/Contact';
 import CaseStudy from '../pages/CaseStudy/CaseStudy';
-
+import Contact from '../pages/Contact/Contact';
+import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayouts />,
     children: [
-      { index: true, 
-        element: <Home /> 
-      },
-      { path: 'services', 
-        element: <Services /> 
-      },
-      { path: 'case-studies', 
-        element: <CaseStudies /> 
-      },
-      { path: 'case-studies/:id', 
-        element: <CaseStudy></CaseStudy> 
-      },
-      { path: 'about', 
-        element: <About /> 
-      },
-      { path: 'blog', 
-        element: <Home /> 
-      },
-      { path: 'contact', 
-        element: <Contact /> 
-      },
-      { path: '*', 
-        element: <Navigate to="/" replace /> 
-      },
+      { index: true, element: <Home /> },
+      { path: 'services', element: <Services /> },
+      { path: 'case-studies', element: <CaseStudies /> },
+      { path: 'case-studies/:id', element: <CaseStudy /> },
+      { path: 'about', element: <About /> },
+      { path: 'contact', element: <Contact /> },
+      { path: 'privacy-policy', element: <PrivacyPolicy /> },
+      { path: '*', element: <Navigate to="/" replace /> },
     ],
   },
 ]);

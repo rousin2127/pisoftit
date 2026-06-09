@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router';
-import Navbar from '../components/layout/Navbar';
+import SiteHeader from '../components/layout/SiteHeader';
+import NavbarSpacer from '../components/layout/NavbarSpacer';
 import Footer from '../components/layout/Footer';
+import useScrollReveal from '../hooks/useScrollReveal';
 
 const RootLayouts = () => {
   const { pathname } = useLocation();
+  useScrollReveal(pathname);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [pathname]);
 
   return (
-    <div className=" min-h-screen flex flex-col font-sans selection:bg-brand-500 selection:text-white">
-      <Navbar />
+    <div className="min-h-screen flex flex-col font-sans selection:bg-brand-500 selection:text-white">
+      <SiteHeader />
+      <NavbarSpacer />
       <main className="flex-grow">
         <Outlet />
       </main>

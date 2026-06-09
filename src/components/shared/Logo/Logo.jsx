@@ -1,19 +1,23 @@
 import React from 'react';
+import logo3 from '../../../assets/3.png';
 
-import logo2 from "../../../assets/2.png"
-import logo3 from '../../../assets/3.png'
-
-const Logo = () => {
-    return (
-        <div className='flex items-center gap-3'>
-            <div>
-                <img className='w-15' src={logo3} alt="" />
-            </div>
-            <div className=''>
-                <img className='w-30' src={logo2} alt="" />
-            </div>
-        </div>
-    );
+const Logo = ({ light = false }) => {
+  return (
+    <div className="flex items-center gap-3">
+      <div>
+        <img className="w-10 h-10 object-contain" src={logo3} alt="PAISOFT IT" />
+      </div>
+      <div>
+        <h2
+          className={`font-bold text-2xl ${
+            light ? 'text-white' : 'text-[#061153] dark:text-white'
+          }`}
+        >
+          Paisoft IT
+        </h2>
+      </div>
+    </div>
+  );
 };
 
 export default Logo;

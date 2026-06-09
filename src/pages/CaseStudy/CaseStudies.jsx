@@ -12,15 +12,15 @@ const CaseStudies = () => {
     active === 'All' ? caseStudies : caseStudies.filter((s) => s.category === active);
 
   return (
-    <div className="pt-32 pb-24">
+    <div className="py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl mb-16 reveal">
-          <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-8">
+          <h1 className="text-h1 text-slate-900 dark:text-white mb-4">
             Our <span className="text-brand-600">Case Studies</span>
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-            Real-world examples of how we&apos;ve helped enterprises solve technical challenges and
-            achieve digital excellence.
+          <p className="text-body text-slate-600 dark:text-slate-400">
+            Selected projects showcasing how PAISOFT IT delivers web, e-commerce, POS, and corporate
+            software solutions for businesses.
           </p>
         </div>
 

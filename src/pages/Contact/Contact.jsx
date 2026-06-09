@@ -1,158 +1,215 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, AlertCircle } from 'lucide-react';
 import { siteConfig } from '../../config/site';
-import useScrollReveal from '../../hooks/useScrollReveal';
+import { sendContactMessage } from '../../api/contact';
+import { services } from '../../data/services';
+
+const initialForm = { name: '', email: '', phone: '', service: services[0]?.title || 'Other', message: '' };
 
 const Contact = () => {
-  useScrollReveal();
+  const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState(null);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    setTimeout(() => setStatus('success'), 1500);
+    setError('');
+
+    try {
+      await sendContactMessage(form);
+      setStatus('success');
+      setForm(initialForm);
+    } catch (err) {
+      setStatus('error');
+      setError(err.message || 'Something went wrong. Please call or email us directly.');
+    }
   };
 
   return (
-    <div className="pt-32 pb-24">
+    <div className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-3xl mb-16 reveal">
-          <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-            Let&apos;s build your <span className="text-brand-600">next big thing</span> together.
+        <div className="max-w-3xl mb-12 reveal">
+          <p className="section-label mb-3">Get in Touch</p>
+          <h1 className="text-h1 text-slate-900 dark:text-white mb-4">
+            Let&apos;s build your <span className="text-brand-600">next project</span> together
           </h1>
-          <p className="text-lg text-slate-600 dark:text-slate-400">
-            Have a project in mind? We&apos;d love to hear from you. Fill out the form or use our
-            contact details to reach out.
+          <p className="text-body text-slate-600 dark:text-slate-400">
+            Fill out the form and we will respond within one business day. You can also call or email
+            us directly.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          <div className="reveal">
-            <div className="space-y-10">
-              <div className="flex gap-6">
-                <div className="w-14 h-14 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-2xl flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold dark:text-white mb-1">Email Us</h3>
-                  <p className="text-slate-500 mb-2">Our team will get back to you within 24 hours.</p>
-                  <a
-                    href={`mailto:${siteConfig.contact.email}`}
-                    className="text-lg font-medium text-brand-600 hover:underline"
-                  >
-                    {siteConfig.contact.email}
-                  </a>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="reveal space-y-8">
+            <div className="flex gap-5">
+              <div className="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-xl flex items-center justify-center shrink-0">
+                <Mail className="w-5 h-5" />
               </div>
-              <div className="flex gap-6">
-                <div className="w-14 h-14 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-2xl flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold dark:text-white mb-1">Call Us</h3>
-                  <p className="text-slate-500 mb-2">Mon-Fri from 10am to 6pm (GMT+6).</p>
-                  <a
-                    href={`tel:${siteConfig.contact.phone}`}
-                    className="text-lg font-medium text-brand-600 hover:underline"
-                  >
-                    {siteConfig.contact.phone}
-                  </a>
-                </div>
+              <div>
+                <h3 className="text-h3 text-slate-900 dark:text-white mb-1">Email</h3>
+                <p className="text-sm text-slate-500 mb-2">We reply within 24 hours.</p>
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="text-base font-medium text-brand-600 hover:underline"
+                >
+                  {siteConfig.contact.email}
+                </a>
               </div>
-              <div className="flex gap-6">
-                <div className="w-14 h-14 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-2xl flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold dark:text-white mb-1">Our Office</h3>
-                  <p className="text-slate-500 mb-2">Visit us for a coffee and chat.</p>
-                  <address className="text-lg font-medium text-slate-900 dark:text-white not-italic">
-                    {siteConfig.contact.address}
-                  </address>
-                </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-xl flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-h3 text-slate-900 dark:text-white mb-1">Phone</h3>
+                <p className="text-sm text-slate-500 mb-2">{siteConfig.contact.hours}</p>
+                <a
+                  href={`tel:${siteConfig.contact.phone}`}
+                  className="text-base font-medium text-brand-600 hover:underline"
+                >
+                  {siteConfig.contact.phoneDisplay}
+                </a>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="w-12 h-12 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-xl flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-h3 text-slate-900 dark:text-white mb-1">Office</h3>
+                <p className="text-sm text-slate-500 mb-2">Visit us by appointment.</p>
+                <address className="text-base font-medium text-slate-700 dark:text-slate-300 not-italic">
+                  {siteConfig.contact.address}
+                </address>
               </div>
             </div>
           </div>
 
           <div className="reveal">
-            <div className="bg-white dark:bg-slate-900 p-8 lg:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/20 dark:shadow-none">
+            <div className="bg-white dark:bg-slate-900 p-6 lg:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg">
               {status === 'success' ? (
-                <div className="text-center py-10">
-                  <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Send className="w-8 h-8" />
+                <div className="text-center py-8">
+                  <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Send className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold dark:text-white mb-2">Message Sent!</h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-8">
-                    Thank you for reaching out. We&apos;ll be in touch very soon.
+                  <h3 className="text-h3 text-slate-900 dark:text-white mb-2">Message sent!</h3>
+                  <p className="text-body text-slate-600 dark:text-slate-400 mb-6">
+                    Thank you for contacting PAISOFT IT. We will get back to you shortly.
                   </p>
                   <button
                     type="button"
                     onClick={() => setStatus(null)}
-                    className="text-brand-600 font-bold hover:underline"
+                    className="text-brand-600 font-semibold hover:underline text-sm"
                   >
                     Send another message
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                        Full Name
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  {status === 'error' && (
+                    <div className="flex gap-3 items-start bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 text-sm px-4 py-3 rounded-xl border border-red-200 dark:border-red-800">
+                      <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
+                      <span>{error}</span>
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="space-y-1.5">
+                      <label htmlFor="name" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                        Full Name *
                       </label>
                       <input
+                        id="name"
+                        name="name"
                         required
-                        type="text"
-                        placeholder="Name"
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-brand-500/50"
+                        value={form.name}
+                        onChange={handleChange}
+                        placeholder="Your name"
+                        className="w-full px-4 py-2.5 text-base bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:ring-2 focus:ring-brand-500/40"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                        Email Address
+                    <div className="space-y-1.5">
+                      <label htmlFor="email" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                        Email *
                       </label>
                       <input
-                        required
+                        id="email"
+                        name="email"
                         type="email"
-                        placeholder="user@example.com"
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-brand-500/50"
+                        required
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="you@company.com"
+                        className="w-full px-4 py-2.5 text-base bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:ring-2 focus:ring-brand-500/40"
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                      Service Required
+
+                  <div className="space-y-1.5">
+                    <label htmlFor="phone" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                      Phone Number
                     </label>
-                    <select className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-brand-500/50">
-                      <option>Web Application Development</option>
-                      <option>E-commerce Solution</option>
-                      <option>ML/AI Project</option>
-                      <option>POS Management</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                      Message
-                    </label>
-                    <textarea
-                      required
-                      rows={4}
-                      placeholder="Tell us about your project..."
-                      className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-brand-500/50 resize-none"
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={form.phone}
+                      onChange={handleChange}
+                      placeholder="+880 1XXX-XXXXXX"
+                      className="w-full px-4 py-2.5 text-base bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:ring-2 focus:ring-brand-500/40"
                     />
                   </div>
+
+                  <div className="space-y-1.5">
+                    <label htmlFor="service" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                      Service Required
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={form.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2.5 text-base bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:ring-2 focus:ring-brand-500/40"
+                    >
+                      {services.map((s) => (
+                        <option key={s.id} value={s.title}>
+                          {s.title}
+                        </option>
+                      ))}
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label htmlFor="message" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="Tell us about your project..."
+                      className="w-full px-4 py-2.5 text-base bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:ring-2 focus:ring-brand-500/40 resize-none"
+                    />
+                  </div>
+
                   <button
                     type="submit"
                     disabled={status === 'loading'}
-                    className="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-bold shadow-lg shadow-brand-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                    className="w-full py-3 bg-brand-600 hover:bg-brand-700 disabled:opacity-60 text-white rounded-lg font-semibold text-base transition-all flex items-center justify-center gap-2"
                   >
-                    {status === 'loading' ? (
-                      'Sending...'
-                    ) : (
-                      <>
-                        Send Message <Send className="w-4 h-4" />
-                      </>
+                    {status === 'loading' ? 'Sending...' : (
+                      <>Send Message <Send className="w-4 h-4" /></>
                     )}
                   </button>
                 </form>

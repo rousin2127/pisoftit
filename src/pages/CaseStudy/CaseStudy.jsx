@@ -14,7 +14,7 @@ const CaseStudy = () => {
   // 3. Render a fallback state if the case study isn't found
   if (!study) {
     return (
-      <div className="pt-32 pb-24 text-center">
+      <div className="pb-24 text-center">
         <h2 className="text-2xl font-bold text-slate-900 mb-4">Case study not found</h2>
         <Link to="/case-studies" className="text-blue-600 hover:underline">
           Back to all Case Studies
@@ -30,7 +30,7 @@ const CaseStudy = () => {
         <span className="inline-block bg-[#e0f0ff] text-[#0060c1] text-xs font-semibold px-4 py-1.5 rounded-full">
           Success Story / {study.category}
         </span>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+        <h1 className="text-h1 text-slate-900 dark:text-white">
           {study.title}
         </h1>
       </div>
@@ -48,7 +48,7 @@ const CaseStudy = () => {
 
       {/* Description Content */}
       <div className="prose dark:prose-invert max-w-none mb-12">
-        <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+        <p className="text-body text-slate-600 dark:text-slate-400">
           {study.description}
         </p>
       </div>
