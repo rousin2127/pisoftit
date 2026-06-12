@@ -118,10 +118,10 @@ const Team = () => {
           </div>
 
           {/* প্যাজিনেশন কন্ট্রোলস (Pagination Buttons) */}
-          <div className="flex items-center justify-between mt-6">
-            <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
+          <div className="flex items-center justify-end mt-6">
+            {/* <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
               Showing {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, teamMembers.length)} of {teamMembers.length} members
-            </span>
+            </span> */}
             
             <div className="flex items-center gap-2">
               {/* Previous Button */}

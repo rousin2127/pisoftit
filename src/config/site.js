@@ -11,7 +11,7 @@ export const siteConfig = {
   stats: [
     { value: '100+', label: 'Projects Delivered' },
     { value: '10+', label: 'Years Experience' },
-    { value: '20', label: 'Team Members' },
+    { value: '20+', label: 'Team Members' },
     { value: '24/7', label: 'Technical Support' },
   ],
   navigation: [
