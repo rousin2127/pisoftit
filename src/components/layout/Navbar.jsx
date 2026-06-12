@@ -39,19 +39,24 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link to="/" onClick={closeMobile} className="flex items-center group">
-          <div className="transition-transform duration-300 group-hover:scale-105">
-            <Logo />
-          </div>
-        </Link>
+        
+        {/* ১. লোগো এরিয়া (বামপাশে থাকবে) */}
+        <div className="flex-1 flex justify-start">
+          <Link to="/" onClick={closeMobile} className="flex items-center group">
+            <div className="transition-transform duration-300 group-hover:scale-105">
+              <Logo />
+            </div>
+          </Link>
+        </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        {/* ২. নেভিগেশন লিংক এরিয়া (ডেস্কটপে একদম সেন্টারে থাকবে) */}
+        <div className="hidden  md:flex  items-center justify-center gap-8 ">
           {siteConfig.navigation.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `nav-link-stripe text-sm font-medium pb-0.5 transition-colors ${
+                `nav-link- text-sm font-medium pb-0.5 transition-colors ${
                   isActive
                     ? 'text-brand-600 dark:text-brand-500 active'
                     : 'text-slate-600 dark:text-slate-400 hover:text-brand-600'
@@ -61,6 +66,10 @@ const Navbar = () => {
               {item.name}
             </NavLink>
           ))}
+        </div>
+
+        {/* ৩. থিম বাটন এরিয়া (ডেস্কটপে ডানপাশে থাকবে) */}
+        <div className="hidden  md:flex items-center justify-end flex-1">
           <button
             type="button"
             onClick={toggleTheme}
@@ -71,6 +80,7 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* মোবাইল রেসপন্সিভ বাটন এরিয়া */}
         <div className="md:hidden flex items-center gap-3">
           <button
             type="button"
@@ -91,6 +101,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* মোবাইল ড্রপডাউন মেনু */}
       <div
         className={`md:hidden border-t border-slate-100 dark:border-slate-800 transition-all duration-300 overflow-hidden ${
           mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
