@@ -7,16 +7,22 @@ import Member4 from '../../../assets/member4.png';
 import Member5 from '../../../assets/member5.png';
 import Member6 from '../../../assets/member6.png';
 import Member7 from '../../../assets/member7.png';
+import Member8 from '../../../assets/md.png';
+import Member9 from '../../../assets/bappi.png';
+
+
 
 const Team = () => {
   const teamMembers = [
     { id: 1, name: 'Md. Kamrul Hasan Kabir', role: 'Founder & CEO', image: Member1 },
-    { id: 2, name: 'Md. Kawsar', role: 'CTO', image: Member2 },
-    { id: 3, name: 'Sawrav Hasan', role: 'Project Manager', image: Member3 },
-    { id: 4, name: 'Md. Asad', role: 'Senior Software Eng', image: Member4 },
-    { id: 5, name: 'Md. Salafi', role: 'Senior Developer', image: Member5 },
-    { id: 6, name: 'Umma Fatima', role: 'QA', image: Member6 },
-    { id: 7, name: 'Md. Sojib Mridha', role: 'Head of Marketing', image: Member7 },
+    { id: 2, name: 'Md. Kawsar', role: 'Chief Technology Officer (CTO)', image: Member2 },
+    { id: 3, name: 'Shahadat H Sourov', role: 'Project Manager', image: Member3 },
+    { id: 4, name: 'Md. Asaduzzaman Asad', role: 'Senior Software Engineer', image: Member4 },
+    { id: 5, name: 'Muhammad Sahinur Salafee', role: 'Senior Developer', image: Member5 },
+    { id: 6, name: 'Umma Fatima', role: 'Quality Assurance (QA)', image: Member6 },
+    { id: 7, name: 'Sojib Hossain Mridha', role: 'Head of Marketing', image: Member7 },
+    { id: 8, name: 'Md. Rousin', role: 'Front-End Developer', image: Member8 },
+    { id: 9, name: 'Rakibul Islam Bappi', role: 'Android Developer', image: Member9 },
   ];
 
   // Pagination এর জন্য স্টেট এবং কনফিগ
