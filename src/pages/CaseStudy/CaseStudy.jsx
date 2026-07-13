@@ -22,26 +22,48 @@ const CaseStudy = () => {
     );
   }
 
+  const isCompleted = study.status === 'completed';
+
   return (
     <div>
       <PageHero
-        label={`Success Story / ${study.category}`}
+        label={`${study.category} · ${study.statusLabel}`}
         title={study.title}
         subtitle={study.description}
       />
 
       <div className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6">
+          <div className="flex flex-wrap items-center gap-3 mb-8 reveal">
+            <span className="text-sm text-slate-500">Client:</span>
+            <span className="text-sm font-semibold text-slate-900 dark:text-white">
+              {study.client}
+            </span>
+            <span
+              className={`ml-auto px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                isCompleted
+                  ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300'
+                  : 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300'
+              }`}
+            >
+              {study.statusLabel}
+            </span>
+          </div>
+
           {study.image && (
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 mb-10 reveal">
-              <img src={study.image} alt={study.title} className="w-full h-full object-cover" />
+            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 mb-10 reveal bg-slate-100 dark:bg-slate-900">
+              <img
+                src={study.image}
+                alt={study.title}
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           )}
 
           {study.results && study.results.length > 0 && (
             <div className="mb-12 reveal">
               <h3 className="text-h3 text-slate-900 dark:text-white mb-4">
-                Project Results & Impact
+                {isCompleted ? 'Project Results & Impact' : 'Project Highlights'}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {study.results.map((result) => (

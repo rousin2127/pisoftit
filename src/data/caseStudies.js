@@ -1,67 +1,60 @@
-import bannerImg from '../assets/banner_0004.jpg';
-import teamImg from '../assets/team.jpg';
-import inrImg from '../assets/inr.jpg';
-import bannerBg from '../assets/banner_bg.jpg';
+import veloraImg from '../assets/cl.png';
+import creativeSourceImg from '../assets/cp.png';
+import unityTourismImg from '../assets/tr.png';
 
 export const caseStudies = [
   {
-    id: '1',
-    title: 'Enterprise Web Application',
-    category: 'Web App',
+    id: 'velora-cotton',
+    title: 'Velora Cotton',
+    category: 'E-commerce',
+    status: 'completed',
+    statusLabel: 'Completed & Handed Over',
     description:
-      'Custom web application built for a growing business to manage operations, reporting, and team workflows from a single dashboard.',
-    image: bannerImg,
-    client: 'Confidential Client',
-    technologies: ['React', 'Spring Boot', 'PostgreSQL'],
+      'A full-featured online clothing store for Velora Cotton — a premium cotton apparel brand. Includes product catalog, category browsing, search, wishlist, cart, and order tracking. Project completed and successfully handed over to the client.',
+    image: veloraImg,
+    client: 'Velora Cotton',
+    technologies: ['React', 'Node.js', 'Tailwind CSS'],
     results: [
-      'Centralized business operations in one platform',
-      'Reduced manual reporting time significantly',
-      'Scalable architecture for future modules',
+      'Modern storefront for premium cotton apparel',
+      'Category browsing, search, wishlist & cart',
+      'Order tracking and customer-ready checkout flow',
+      'Fully completed and handed over to the client',
     ],
   },
   {
-    id: '2',
-    title: 'E-commerce Store Development',
+    id: 'creative-source',
+    title: 'Creative Source',
     category: 'E-commerce',
+    status: 'developing',
+    statusLabel: 'In Development',
     description:
-      'Full-featured online store with product catalog, secure checkout, order management, and admin panel for inventory control.',
-    image: inrImg,
-    client: 'Retail Business',
+      'An e-commerce platform for computers and accessories — laptops, desktops, monitors, PC components, gaming gear, and more. Currently under active development with hot deals, product filtering, and store locator features.',
+    image: creativeSourceImg,
+    client: 'Creative Source',
     technologies: ['React', 'Node.js', 'MongoDB'],
     results: [
-      'Mobile-responsive shopping experience',
-      'Secure payment and order tracking',
-      'Admin dashboard for product management',
+      'Product catalog for computers & accessories',
+      'Hot deals, offers, and category navigation',
+      'Search, cart, and store locator modules',
+      'Currently in active development',
     ],
   },
   {
-    id: '3',
-    title: 'POS Software Management',
-    category: 'POS Software',
+    id: 'unity-tourism',
+    title: 'Unity Tourism Limited',
+    category: 'Web App',
+    status: 'developing',
+    statusLabel: 'In Development',
     description:
-      'Subscription-based POS management system for retail outlets with billing, inventory sync, and multi-branch reporting.',
-    image: teamImg,
-    client: 'Retail & Hospitality',
-    technologies: ['React', 'Java', 'PostgreSQL'],
-    results: [
-      'Real-time inventory across branches',
-      'Automated billing and receipt generation',
-      'Cloud-based subscription management',
-    ],
-  },
-  {
-    id: '4',
-    title: 'Corporate IT Website',
-    category: 'Web Design',
-    description:
-      'Professional corporate website with modern design, fast performance, and CMS-friendly structure for content updates.',
-    image: bannerBg,
-    client: 'IT & Corporate Sector',
+      'A tourism website for Unity Tourism Limited focused on Hajj & Umrah packages, medical and student travel services. Currently in development with package browsing, booking flows, and customer login.',
+    image: unityTourismImg,
+    client: 'Unity Tourism Limited',
     technologies: ['React', 'Tailwind CSS', 'Vite'],
     results: [
-      'Improved brand presence online',
-      'Fast page load and mobile optimization',
-      'Easy content management for the client team',
+      'Hajj & Umrah package showcase',
+      'Quick search and booking-ready layout',
+      'Services for medical & student travel',
+      'Currently in active development',
     ],
   },
 ];
