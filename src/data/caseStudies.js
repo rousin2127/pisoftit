@@ -1,6 +1,6 @@
 import bannerImg from '../assets/banner_0004.jpg';
 import teamImg from '../assets/team.jpg';
-import inrImg from '../assets/inr_02.jpg';
+import inrImg from '../assets/inr.jpg';
 import bannerBg from '../assets/banner_bg.jpg';
 
 export const caseStudies = [

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { siteConfig } from '../../config/site';
+import PageHero from '../../components/shared/PageHero/PageHero';
 
 const sections = [
   {
@@ -35,55 +36,62 @@ const sections = [
 
 const PrivacyPolicy = () => {
   return (
-    <div className="pb-24">
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="mb-12 reveal">
-          <p className="section-label mb-3">Legal</p>
-          <h1 className="text-h1 text-slate-900 dark:text-white mb-4">Privacy Policy</h1>
-          <p className="text-body text-slate-600 dark:text-slate-400">
-            Effective date: {new Date().getFullYear()}. This policy explains how{' '}
-            {siteConfig.name} collects, uses, and protects your information when you visit{' '}
-            <span className="font-medium">paisoftit.com</span>.
-          </p>
-        </div>
+    <div>
+      <PageHero
+        label="Legal"
+        title="Privacy Policy"
+        subtitle={`Effective date: ${new Date().getFullYear()}. This policy explains how ${siteConfig.name} collects, uses, and protects your information when you visit paisoftit.com.`}
+      />
 
-        <div className="space-y-10">
-          {sections.map((section) => (
-            <section key={section.title} className="reveal">
-              <h2 className="text-h3 text-slate-900 dark:text-white mb-3">{section.title}</h2>
-              <p className="text-body text-slate-600 dark:text-slate-400 leading-relaxed">
-                {section.body}
+      <div className="py-16 lg:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="space-y-10">
+            {sections.map((section) => (
+              <section key={section.title} className="reveal">
+                <h2 className="text-h3 text-slate-900 dark:text-white mb-3">{section.title}</h2>
+                <p className="text-body text-slate-600 dark:text-slate-400">{section.body}</p>
+              </section>
+            ))}
+
+            <section className="reveal bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800">
+              <h2 className="text-h3 text-slate-900 dark:text-white mb-3">8. Contact Us</h2>
+              <p className="text-body text-slate-600 dark:text-slate-400 mb-4">
+                For privacy-related questions or data requests, reach us at:
               </p>
+              <ul className="space-y-2 text-body">
+                <li>
+                  <span className="font-medium text-slate-900 dark:text-white">Email: </span>
+                  <a
+                    href={`mailto:${siteConfig.contact.email}`}
+                    className="text-brand-600 hover:underline"
+                  >
+                    {siteConfig.contact.email}
+                  </a>
+                </li>
+                <li>
+                  <span className="font-medium text-slate-900 dark:text-white">Phone: </span>
+                  <a
+                    href={`tel:${siteConfig.contact.phone}`}
+                    className="text-brand-600 hover:underline"
+                  >
+                    {siteConfig.contact.phoneDisplay}
+                  </a>
+                </li>
+                <li>
+                  <span className="font-medium text-slate-900 dark:text-white">Address: </span>
+                  <span className="text-slate-600 dark:text-slate-400">
+                    {siteConfig.contact.address}
+                  </span>
+                </li>
+              </ul>
+              <Link
+                to="/contact"
+                className="inline-block mt-6 text-brand-600 font-medium hover:underline"
+              >
+                Send us a message →
+              </Link>
             </section>
-          ))}
-
-          <section className="reveal bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800">
-            <h2 className="text-h3 text-slate-900 dark:text-white mb-3">8. Contact Us</h2>
-            <p className="text-body text-slate-600 dark:text-slate-400 mb-4">
-              For privacy-related questions or data requests, reach us at:
-            </p>
-            <ul className="space-y-2 text-body">
-              <li>
-                <span className="font-medium text-slate-900 dark:text-white">Email: </span>
-                <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-600 hover:underline">
-                  {siteConfig.contact.email}
-                </a>
-              </li>
-              <li>
-                <span className="font-medium text-slate-900 dark:text-white">Phone: </span>
-                <a href={`tel:${siteConfig.contact.phone}`} className="text-brand-600 hover:underline">
-                  {siteConfig.contact.phoneDisplay}
-                </a>
-              </li>
-              <li>
-                <span className="font-medium text-slate-900 dark:text-white">Address: </span>
-                <span className="text-slate-600 dark:text-slate-400">{siteConfig.contact.address}</span>
-              </li>
-            </ul>
-            <Link to="/contact" className="inline-block mt-6 text-brand-600 font-medium hover:underline">
-              Send us a message →
-            </Link>
-          </section>
+          </div>
         </div>
       </div>
     </div>
