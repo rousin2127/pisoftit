@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { services } from '../../data/services';
 import { getServiceIcon } from '../../utils/serviceIcons';
@@ -29,6 +29,22 @@ const steps = [
 ];
 
 const Services = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.replace('#', '');
+    const timer = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('ring-2', 'ring-brand-500/60');
+        setTimeout(() => el.classList.remove('ring-2', 'ring-brand-500/60'), 1800);
+      }
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [hash]);
+
   return (
     <div>
       <PageHero
@@ -49,7 +65,8 @@ const Services = () => {
               return (
                 <div
                   key={service.id}
-                  className="reveal card-stripe p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group"
+                  id={service.slug}
+                  className="reveal card-stripe p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group scroll-mt-28 transition-shadow"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="w-14 h-14 bg-brand-50 dark:bg-brand-900/20 text-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">

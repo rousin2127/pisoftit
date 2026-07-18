@@ -16,8 +16,21 @@ export const siteConfig = {
   ],
   navigation: [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
+    {
+      name: 'Services',
+      path: '/services',
+      children: [
+        { name: 'Web App Solutions', path: '/services#web-app-solutions' },
+        { name: 'E-commerce Development', path: '/services#ecommerce-development' },
+        { name: 'Corporate Web Design', path: '/services#corporate-web-design' },
+        { name: 'POS Software Management', path: '/services#pos-software-management' },
+        { name: 'ERP Solution', path: '/services#ml-deep-learning' },
+        { name: 'Mobile App Development', path: '/services#flask-api-development' },
+      ],
+    },
     { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Career', path: '/career' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ],

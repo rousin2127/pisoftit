@@ -1,0 +1,65 @@
+import React from 'react';
+import { Link } from 'react-router';
+import PageHero from '../../components/shared/PageHero/PageHero';
+
+const posts = [
+  {
+    id: 1,
+    title: 'Building Reliable Web Applications',
+    date: 'July 2026',
+    excerpt:
+      'How we approach architecture, security, and performance when delivering production-ready web apps for growing businesses.',
+  },
+  {
+    id: 2,
+    title: 'E-commerce Trends for Bangladesh Brands',
+    date: 'June 2026',
+    excerpt:
+      'Practical insights on storefront UX, checkout conversion, and inventory workflows for local retail brands going online.',
+  },
+  {
+    id: 3,
+    title: 'Why Custom Software Beats One-Size Templates',
+    date: 'May 2026',
+    excerpt:
+      'When off-the-shelf tools fall short — and how tailored software creates long-term operational advantage.',
+  },
+];
+
+const Blog = () => {
+  return (
+    <div>
+      <PageHero
+        label="Insights"
+        title={
+          <>
+            Our <span className="text-blue-300">Blog</span>
+          </>
+        }
+        subtitle="Articles and notes from the PAISOFT IT team on software engineering, product delivery, and digital growth."
+      />
+
+      <div className="py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-6 space-y-6">
+          {posts.map((post) => (
+            <article
+              key={post.id}
+              className="reveal border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-slate-900"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                {post.date}
+              </p>
+              <h2 className="text-h3 text-slate-900 dark:text-white mb-3">{post.title}</h2>
+              <p className="text-body-sm text-slate-600 dark:text-slate-400 mb-4">{post.excerpt}</p>
+              <Link to="/contact" className="text-sm font-semibold text-brand-600 hover:underline">
+                Talk to our team →
+              </Link>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;

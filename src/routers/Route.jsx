@@ -7,6 +7,8 @@ import CaseStudies from '../pages/CaseStudy/CaseStudies';
 import CaseStudy from '../pages/CaseStudy/CaseStudy';
 import Contact from '../pages/Contact/Contact';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
+import Blog from '../pages/Blog/Blog';
+import Career from '../pages/Career/Career';
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +19,8 @@ export const router = createBrowserRouter([
       { path: 'services', element: <Services /> },
       { path: 'case-studies', element: <CaseStudies /> },
       { path: 'case-studies/:id', element: <CaseStudy /> },
+      { path: 'blog', element: <Blog /> },
+      { path: 'career', element: <Career /> },
       { path: 'about', element: <About /> },
       { path: 'contact', element: <Contact /> },
       { path: 'privacy-policy', element: <PrivacyPolicy /> },
