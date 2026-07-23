@@ -58,7 +58,7 @@ const Career = () => {
             {openings.map((job) => (
               <div
                 key={job.id}
-                className="reveal flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-white dark:bg-slate-900"
+                className="reveal card-highlight flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl p-6"
               >
                 <div>
                   <h3 className="text-h3 text-slate-900 dark:text-white mb-2">{job.title}</h3>
@@ -82,7 +82,7 @@ const Career = () => {
             ))}
           </div>
 
-          <div className="text-center reveal bg-slate-50 dark:bg-slate-900 rounded-2xl py-12 px-6 border border-slate-200 dark:border-slate-800">
+          <div className="text-center reveal card-highlight rounded-2xl py-12 px-6">
             <h2 className="text-h2 text-slate-900 dark:text-white mb-4">
               Don&apos;t see the right role?
             </h2>

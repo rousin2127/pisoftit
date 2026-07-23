@@ -59,7 +59,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-10 lg:p-16 text-center reveal">
+          <div className="card-highlight rounded-2xl p-10 lg:p-16 text-center reveal">
             <h2 className="text-h2 dark:text-white mb-4">Need a reliable tech partner?</h2>
             <p className="text-body text-slate-600 dark:text-slate-400 mb-6 max-w-xl mx-auto">
               We are always open to discussing new projects, creative ideas or opportunities to be

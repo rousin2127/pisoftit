@@ -66,7 +66,7 @@ const Services = () => {
                 <div
                   key={service.id}
                   id={service.slug}
-                  className="reveal card-stripe p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group scroll-mt-28 transition-shadow"
+                  className="reveal card-stripe p-8 bg-white dark:bg-slate-900 group scroll-mt-28"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="w-14 h-14 bg-brand-50 dark:bg-brand-900/20 text-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -91,7 +91,7 @@ const Services = () => {
             })}
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-900 rounded-3xl p-10 lg:p-16 reveal-scale border border-slate-100 dark:border-slate-800">
+          <div className="card-highlight rounded-3xl p-10 lg:p-16 reveal-scale">
             <div className="text-center mb-12">
               <h2 className="text-h2 dark:text-white mb-4">Our Engineering Process</h2>
               <p className="text-body text-slate-600 dark:text-slate-400">

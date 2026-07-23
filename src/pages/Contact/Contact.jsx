@@ -100,7 +100,7 @@ const Contact = () => {
             </div>
 
             <div className="reveal">
-              <div className="bg-white dark:bg-slate-900 p-6 lg:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg">
+              <div className="card-highlight bg-white dark:bg-slate-900 p-6 lg:p-8 rounded-2xl">
                 {status === 'success' ? (
                   <div className="text-center py-8">
                     <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">

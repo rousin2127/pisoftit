@@ -40,8 +40,8 @@ const AboutUs = () => {
               key={item.id}
               className={`reveal card-stripe rounded-xl p-6 flex flex-col ${
                 item.isFeatured
-                  ? 'bg-[#050C44] text-white shadow-xl'
-                  : 'bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800'
+                  ? 'card-featured text-white'
+                  : 'bg-white dark:bg-slate-900'
               }`}
               style={{ transitionDelay: `${index * 80}ms` }}
             >

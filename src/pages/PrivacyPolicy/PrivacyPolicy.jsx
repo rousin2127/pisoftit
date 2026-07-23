@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
               </section>
             ))}
 
-            <section className="reveal bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800">
+            <section className="reveal card-highlight rounded-2xl p-8">
               <h2 className="text-h3 text-slate-900 dark:text-white mb-3">8. Contact Us</h2>
               <p className="text-body text-slate-600 dark:text-slate-400 mb-4">
                 For privacy-related questions or data requests, reach us at:

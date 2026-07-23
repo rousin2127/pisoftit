@@ -10,7 +10,7 @@ const Logo = ({ light = false }) => {
       <div>
         <h2
           className={`font-bold text-2xl ${
-            light ? 'text-white' : 'text-[#061153] dark:text-white'
+            light ? 'text-white' : 'text-slate-800 dark:text-slate-100'
           }`}
         >
           Paisoft IT

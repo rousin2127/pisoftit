@@ -64,8 +64,8 @@ const Navbar = () => {
     <nav
       className={`transition-all duration-300 ${
         scrolled
-          ? 'glass-nav bg-white/90 dark:bg-slate-950/90 shadow-sm border-b border-slate-200/50 dark:border-slate-800/50'
-          : 'bg-white/80 dark:bg-slate-950/80 border-b border-transparent'
+          ? 'glass-nav bg-white/95 dark:bg-slate-950/90 shadow-sm border-b border-brand-100/80 dark:border-slate-800/50'
+          : 'bg-white/70 dark:bg-slate-950/80 border-b border-transparent backdrop-blur-sm'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">

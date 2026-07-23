@@ -6,6 +6,8 @@ import { getServiceIcon } from '../../utils/serviceIcons';
 import Hero from './hero/Hero';
 import AboutUs from './about/AboutUs';
 import AboutCompany from './about/AboutCompany';
+import IndustryFootprint from './industries/IndustryFootprint';
+import ClientsSection from './clients/ClientsSection';
 import Support from './support/Support';
 import Team from './team/Team';
 
@@ -35,7 +37,7 @@ const Home = () => {
               return (
                 <div
                   key={service.id}
-                  className="reveal card-stripe p-8 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 group"
+                  className="reveal card-stripe p-8 bg-white dark:bg-slate-900 group"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 dark:border-slate-700 group-hover:scale-110 group-hover:shadow-brand-600/20 transition-all duration-500">
@@ -58,6 +60,8 @@ const Home = () => {
         </div>
       </section>
 
+      <IndustryFootprint />
+      <ClientsSection />
       <Support />
       <Team />
 

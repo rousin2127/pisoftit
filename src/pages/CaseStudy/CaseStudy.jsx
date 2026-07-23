@@ -57,7 +57,7 @@ const CaseStudy = () => {
               </p>
             </div>
 
-            <div className="text-center mt-10 bg-slate-50 dark:bg-slate-900 rounded-2xl py-12 px-6">
+            <div className="card-highlight text-center mt-10 rounded-2xl py-12 px-6">
               <h2 className="text-h2 text-slate-900 dark:text-white mb-4">
                 Have a similar project in mind?
               </h2>

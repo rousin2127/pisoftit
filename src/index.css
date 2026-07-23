@@ -5,26 +5,66 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-50: #f0f7ff;
-  --color-brand-100: #e0effe;
-  --color-brand-200: #badffd;
-  --color-brand-300: #7cc2fc;
-  --color-brand-400: #36a1f8;
-  --color-brand-500: #0c87eb;
-  --color-brand-600: #0269c7;
-  --color-brand-700: #0354a1;
-  --color-brand-800: #074885;
-  --color-brand-900: #0c3d6f;
+  /* Softer brand blue — less neon, easier on eyes */
+  --color-brand-50: #f3f8fd;
+  --color-brand-100: #e4eef9;
+  --color-brand-200: #c5daf2;
+  --color-brand-300: #92bce6;
+  --color-brand-400: #5a9ad6;
+  --color-brand-500: #2f7fc4;
+  --color-brand-600: #1f6aab;
+  --color-brand-700: #1a568c;
+  --color-brand-800: #184871;
+  --color-brand-900: #173c5c;
+
+  /* Softened slate surfaces for light + dark comfort */
+  --color-slate-50: #f4f7fb;
+  --color-slate-100: #e9eef6;
+  --color-slate-200: #d5deea;
+  --color-slate-300: #b4c2d4;
+  --color-slate-400: #8799b2;
+  --color-slate-500: #647790;
+  --color-slate-600: #4d6078;
+  --color-slate-700: #3f4e63;
+  --color-slate-800: #2a3546;
+  --color-slate-900: #1a2332;
+  --color-slate-950: #0d1420;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Day mode — fresh, eye-catching blue atmosphere */
 body {
   font-family: 'Inter', sans-serif;
-  @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300 text-base leading-relaxed;
+  @apply antialiased transition-colors duration-300 text-base leading-relaxed;
   overflow-x: hidden;
+  color: #1e3348;
+  background-color: #e8f1fb;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 0% -10%, rgba(47, 127, 196, 0.18), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(90, 154, 214, 0.16), transparent 50%),
+    radial-gradient(ellipse 80% 45% at 50% 100%, rgba(31, 106, 171, 0.08), transparent 55%),
+    linear-gradient(180deg, #eef5fc 0%, #e3eef9 45%, #dceaf6 100%);
+  background-attachment: fixed;
+}
+
+.dark body,
+html.dark body {
+  color: #d5deea;
+  background-color: #0d1420;
+  background-image: none;
+  background-attachment: scroll;
+}
+
+/* Crisp white cards so content pops on the blue day background */
+html:not(.dark) .bg-white {
+  background-color: #ffffff;
+}
+
+html:not(.dark) .bg-slate-50 {
+  background-color: rgba(255, 255, 255, 0.72);
 }
 
 /* Industry-standard type scale (16px base) */
@@ -47,9 +87,9 @@ body {
   @apply text-xs leading-normal;
 }
 
-/* ── Stripe-style gradient text ── */
+/* ── Soft gradient text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #0269c7 0%, #36a1f8 40%, #7cc2fc 80%, #0269c7 100%);
+  background: linear-gradient(135deg, #1f6aab 0%, #5a9ad6 45%, #92bce6 85%, #1f6aab 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,7 +98,7 @@ body {
 }
 
 .dark .gradient-text {
-  background: linear-gradient(135deg, #36a1f8 0%, #7cc2fc 40%, #badffd 80%, #36a1f8 100%);
+  background: linear-gradient(135deg, #5a9ad6 0%, #92bce6 40%, #c5daf2 80%, #5a9ad6 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -123,17 +163,88 @@ body {
   border-color: #0269c7;
 }
 
-/* ── Stripe-style cards ── */
+/* ── Highlighted cards (all modes) ── */
+.card-stripe,
+.stat-card,
+.clients-marquee-card,
+.card-highlight {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(31, 106, 171, 0.16) !important;
+  box-shadow:
+    0 1px 2px rgba(15, 40, 80, 0.04),
+    0 10px 28px rgba(31, 106, 171, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.card-stripe::before,
+.card-highlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(145deg, rgba(47, 127, 196, 0.07), transparent 42%);
+  opacity: 1;
+}
+
+.card-stripe:hover,
+.stat-card:hover,
+.clients-marquee-card:hover,
+.card-highlight:hover {
+  transform: translateY(-5px);
+  border-color: rgba(31, 106, 171, 0.35) !important;
+  box-shadow:
+    0 14px 36px rgba(31, 106, 171, 0.18),
+    0 4px 12px rgba(15, 40, 80, 0.06);
+}
+
+.dark .card-stripe,
+.dark .stat-card,
+.dark .clients-marquee-card,
+.dark .card-highlight {
+  background: #151e2e;
+  border-color: rgba(90, 154, 214, 0.22) !important;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.dark .card-stripe::before,
+.dark .card-highlight::before {
+  background: linear-gradient(145deg, rgba(90, 154, 214, 0.1), transparent 45%);
+}
+
+.dark .card-stripe:hover,
+.dark .stat-card:hover,
+.dark .clients-marquee-card:hover,
+.dark .card-highlight:hover {
+  border-color: rgba(90, 154, 214, 0.4) !important;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(90, 154, 214, 0.18);
+}
+
+/* Featured dark card on AboutUs keeps its solid look */
+.card-stripe.card-featured {
+  background: #0f1c3d !important;
+  border-color: rgba(90, 154, 214, 0.28) !important;
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(15, 28, 61, 0.35);
+}
+
+.card-stripe.card-featured::before {
+  background: linear-gradient(145deg, rgba(90, 154, 214, 0.18), transparent 50%);
+}
+
+/* ── Stripe-style cards (base) ── */
 .card-stripe {
-  @apply relative rounded-2xl border transition-all duration-500;
+  @apply relative rounded-2xl;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-}
-.card-stripe:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(2, 105, 199, 0.12), 0 0 0 1px rgba(2, 105, 199, 0.08);
-}
-.dark .card-stripe:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(54, 161, 248, 0.15);
 }
 
 /* ── Floating badge ── */
@@ -168,14 +279,14 @@ body {
 /* ── Grid pattern overlay ── */
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(2, 105, 199, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(2, 105, 199, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(31, 106, 171, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 106, 171, 0.035) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 .dark .grid-pattern {
   background-image:
-    linear-gradient(rgba(54, 161, 248, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(54, 161, 248, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(90, 154, 214, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 154, 214, 0.05) 1px, transparent 1px);
 }
 
 /* ── Section label ── */
@@ -185,7 +296,7 @@ body {
 
 /* ── CTA gradient section ── */
 .cta-gradient {
-  background: linear-gradient(135deg, #0269c7 0%, #0354a1 50%, #074885 100%);
+  background: linear-gradient(135deg, #1f6aab 0%, #1a568c 50%, #184871 100%);
   background-size: 200% 200%;
   animation: cta-shift 8s ease infinite;
 }
@@ -221,17 +332,7 @@ body {
 
 /* ── Stat counter glow ── */
 .stat-card {
-  @apply relative overflow-hidden transition-all duration-500;
-}
-.stat-card::before {
-  content: '';
-  @apply absolute inset-0 opacity-0 transition-opacity duration-500;
-  background: radial-gradient(circle at 50% 0%, rgba(2, 105, 199, 0.08), transparent 70%);
-}
-.stat-card:hover::before { opacity: 1; }
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(2, 105, 199, 0.1);
+  @apply relative overflow-hidden rounded-2xl text-center;
 }
 
 /* ── Shine sweep on hover ── */
@@ -272,4 +373,90 @@ body {
 .divider-accent::after {
   content: '';
   @apply absolute top-0 left-0 w-12 h-0.5 bg-brand-600;
+}
+
+/* ── Our Clients marquee ── */
+.clients-marquee {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.clients-marquee-row {
+  overflow: hidden;
+  width: 100%;
+}
+
+.clients-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: clients-marquee-left 32s linear infinite;
+}
+
+.clients-marquee-row.is-reverse .clients-marquee-track {
+  animation-name: clients-marquee-right;
+  animation-duration: 38s;
+}
+
+.clients-marquee:hover .clients-marquee-track {
+  animation-play-state: paused;
+}
+
+.clients-marquee-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+  min-width: 220px;
+  padding: 1rem 1.35rem;
+  border-radius: 1rem;
+}
+
+.clients-marquee-card:hover {
+  /* hover handled by shared card highlight */
+}
+
+.clients-marquee-mark {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: #1f6aab;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.clients-marquee-name {
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: rgb(15 23 42);
+  white-space: nowrap;
+}
+
+.dark .clients-marquee-name {
+  color: rgb(248 250 252);
+}
+
+@keyframes clients-marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes clients-marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-marquee-track {
+    animation: none;
+  }
 }

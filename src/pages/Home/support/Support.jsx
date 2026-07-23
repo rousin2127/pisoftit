@@ -14,7 +14,7 @@ const Support = () => {
               Why Businesses Choose PAISOFT IT
             </h2>
             <div className="space-y-6">
-              <div className="reveal flex gap-4 card-stripe bg-white dark:bg-slate-800/50 p-5 rounded-xl border border-slate-100 dark:border-slate-700/50">
+              <div className="reveal flex gap-4 card-stripe p-5 rounded-xl">
                 <div className="shrink-0 p-3 bg-brand-600 text-white rounded-xl h-fit shadow-lg shadow-brand-600/25">
                   <Shield className="w-6 h-6" />
                 </div>
@@ -27,7 +27,7 @@ const Support = () => {
                 </div>
               </div>
               <div
-                className="reveal flex gap-4 card-stripe bg-white dark:bg-slate-800/50 p-5 rounded-xl border border-slate-100 dark:border-slate-700/50"
+                className="reveal flex gap-4 card-stripe p-5 rounded-xl"
                 style={{ transitionDelay: '100ms' }}
               >
                 <div className="shrink-0 p-3 bg-brand-600 text-white rounded-xl h-fit shadow-lg shadow-brand-600/25">

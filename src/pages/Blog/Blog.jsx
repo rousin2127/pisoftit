@@ -44,7 +44,7 @@ const Blog = () => {
           {posts.map((post) => (
             <article
               key={post.id}
-              className="reveal border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-slate-900"
+              className="reveal card-highlight border rounded-2xl p-6 sm:p-8"
             >
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
                 {post.date}
