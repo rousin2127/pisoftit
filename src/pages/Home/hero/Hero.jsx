@@ -1,47 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import heroImg from '../../../assets/hero1.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[72vh] lg:min-h-[78vh] flex items-end lg:items-center overflow-hidden">
-      {/* Full-bleed photo */}
+    <section className="relative min-h-[75vh] lg:min-h-[80vh] flex items-center overflow-hidden">
       <img
         src={heroImg}
         alt="PAISOFT IT team collaborating in the office"
         className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
       />
 
-      {/* Soft realistic vignette — keeps photo visible, text readable */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/40 to-slate-950/15" />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-slate-950/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/50 to-slate-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-slate-900/30" />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-16 lg:py-24">
-        <div className="max-w-xl reveal-left">
-          <p className="text-sm font-medium tracking-wide text-white/80 mb-4">
-            PAISOFT IT
-          </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-5">
-            Reliable software, built by a real engineering team
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-20 lg:py-28">
+        <div className="max-w-2xl reveal-left">
+
+          <h1 className="text-3xl sm:text-4xl lg:text-[3rem] font-bold text-white leading-[1.12] mb-5">
+            We build software that helps your business run better
           </h1>
-          <p className="text-base sm:text-lg text-white/85 leading-relaxed mb-8 max-w-md">
-            Web apps, e-commerce, and business systems — designed, developed, and delivered from
-            Dhaka.
+
+          <p className="text-base sm:text-lg text-white/85 leading-relaxed mb-8 max-w-lg">
+            From e-commerce stores to custom business systems — we design, develop, and support
+            software with care, clarity, and a team that stays with you.
           </p>
+
           <div className="flex flex-wrap gap-3">
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold rounded-md transition-colors"
-            >
-              Our Services
+            <Link to="/services" className="btn-primary">
+              Explore Services
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 border border-white/40 text-white text-sm font-semibold rounded-md hover:bg-white/10 transition-colors"
-            >
-              Get in Touch
+            <Link to="/contact" className="btn-secondary">
+              Let&apos;s Talk
             </Link>
           </div>
         </div>

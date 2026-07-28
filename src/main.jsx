@@ -4,8 +4,8 @@ import './index.css';
 import { RouterProvider } from 'react-router';
 import { router } from './routers/Route';
 
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+document.documentElement.classList.remove('dark');
+localStorage.removeItem('theme');
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

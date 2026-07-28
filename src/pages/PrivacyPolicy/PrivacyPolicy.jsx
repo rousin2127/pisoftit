@@ -22,7 +22,7 @@ const sections = [
   },
   {
     title: '5. Cookies',
-    body: 'We use essential cookies to remember your theme preference (light/dark mode) in local storage. We do not use cookies for advertising or tracking purposes without your consent.',
+    body: 'We use essential cookies only for core website functionality. We do not use cookies for advertising or tracking purposes without your consent.',
   },
   {
     title: '6. Your Rights',

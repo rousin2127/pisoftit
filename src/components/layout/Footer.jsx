@@ -26,19 +26,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0f1c3d] dark:bg-slate-950 border-t border-white/5 pt-16 pb-8">
+    <footer className="bg-gradient-to-b from-slate-800 to-slate-900 text-white pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="space-y-4">
             <Link to="/">
               <Logo light />
             </Link>
-            <p className="text-body-sm text-slate-400">{siteConfig.tagline}</p>
+            <p className="text-body-sm text-slate-400 leading-relaxed">{siteConfig.tagline}</p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {siteConfig.navigation.map((item) => (
                 <li key={item.path}>
                   <Link to={item.path} className="text-body-sm text-slate-400 hover:text-white transition-colors">
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Contact</h4>
+            <h4 className="text-sm font-semibold text-white mb-4">Get in Touch</h4>
             <ul className="space-y-3 text-body-sm">
               <li>
                 <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
@@ -77,14 +77,14 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
+            <h4 className="text-sm font-semibold text-white mb-4">Stay Updated</h4>
             <p className="text-body-sm text-slate-400 mb-3">
-              Get updates on software engineering and IT solutions.
+              Tips and updates from our team — no spam.
             </p>
             {subStatus === 'success' ? (
               <div className="flex items-center gap-2 text-green-400 text-sm">
                 <CheckCircle className="w-4 h-4" />
-                Subscribed successfully!
+                You&apos;re subscribed!
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-2">
@@ -100,12 +100,12 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
-                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-lg outline-none focus:ring-2 focus:ring-brand-500/40 text-white placeholder:text-slate-500"
+                  className="w-full px-3 py-2.5 text-sm bg-white/10 border border-white/15 rounded-xl outline-none focus:ring-2 focus:ring-brand-400/40 text-white placeholder:text-slate-500"
                 />
                 <button
                   type="submit"
                   disabled={subStatus === 'loading'}
-                  className="w-full px-3 py-2 text-sm bg-brand-600 hover:bg-brand-500 disabled:opacity-60 text-white rounded-lg font-medium transition-colors"
+                  className="w-full px-3 py-2.5 text-sm bg-brand-600 hover:bg-brand-500 disabled:opacity-60 text-white rounded-xl font-medium transition-colors"
                 >
                   {subStatus === 'loading' ? 'Subscribing...' : 'Subscribe'}
                 </button>

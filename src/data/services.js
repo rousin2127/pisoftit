@@ -1,3 +1,10 @@
+import appDevelopmentIcon from '../assets/app-development.png';
+import onlineShopIcon from '../assets/online-shop.png';
+import brandIdentityIcon from '../assets/brand-identity.png';
+import posSystemIcon from '../assets/pos-system.png';
+import algorithmIcon from '../assets/algorithm.png';
+import mobileAppIcon from '../assets/mobile-app.png';
+
 export const services = [
   {
     id: '1',
@@ -5,6 +12,7 @@ export const services = [
     description:
       'Custom enterprise-grade web applications tailored to streamline your business operations and workflows.',
     icon: 'Layout',
+    image: appDevelopmentIcon,
     slug: 'web-app-solutions',
   },
   {
@@ -13,6 +21,7 @@ export const services = [
     description:
       'Scalable and secure online storefronts designed to maximize conversions and enhance user shopping experiences.',
     icon: 'ShoppingCart',
+    image: onlineShopIcon,
     slug: 'ecommerce-development',
   },
   {
@@ -21,6 +30,7 @@ export const services = [
     description:
       'Professional IT and corporate websites that build trust and communicate your brand value effectively.',
     icon: 'Globe',
+    image: brandIdentityIcon,
     slug: 'corporate-web-design',
   },
   {
@@ -29,6 +39,7 @@ export const services = [
     description:
       'Subscription-based POS machine software management solutions for retail and hospitality sectors.',
     icon: 'Monitor',
+    image: posSystemIcon,
     slug: 'pos-software-management',
   },
   {
@@ -37,6 +48,7 @@ export const services = [
     description:
       'Innovative AI projects involving Machine Learning and Deep Learning to drive data-centric decisions.',
     icon: 'Cpu',
+    image: algorithmIcon,
     slug: 'ml-deep-learning',
   },
   {
@@ -45,6 +57,7 @@ export const services = [
     description:
       'Robust backend development using Python Flask for high-performance APIs and microservices.',
     icon: 'Terminal',
+    image: mobileAppIcon,
     slug: 'flask-api-development',
   },
 ];

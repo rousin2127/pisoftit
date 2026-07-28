@@ -9,7 +9,7 @@ const About = () => {
       <PageHero
         label="About Us"
         title="Engineering Reliability Since Inception."
-        subtitle="PAISOFT IT was founded with a clear mission: to bridge the gap between complex business challenges and elegant software solutions. Based in Dhaka, we serve clients globally with a focus on enterprise stability and innovation."
+        subtitle="PAISOFT IT was founded with a clear mission: to bridge the gap between complex business challenges and elegant software solutions. We serve clients globally with a focus on enterprise stability and innovation."
       />
 
       <div className="py-16 lg:py-24">

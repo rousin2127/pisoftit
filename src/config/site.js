@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'PAISOFT IT',
-  tagline: 'Engineering reliable software for modern businesses.',
+  tagline: 'Thoughtful software for businesses that want to grow with confidence.',
   contact: {
     email: 'info@paisoftit.com',
     phone: '+8801755191900',

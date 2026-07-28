@@ -2,42 +2,44 @@ import { Shield, Zap } from 'lucide-react';
 import React from 'react';
 import StatDisplay from '../../../components/ui/StatDisplay';
 import { siteConfig } from '../../../config/site';
+import SectionHeader from '../../../components/shared/SectionHeader/SectionHeader';
 
 const Support = () => {
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-40 pointer-events-none" />
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="section-shell section-alt">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div className="reveal-left">
-            <h2 className="text-h2 mb-6 dark:text-white">
-              Why Businesses Choose PAISOFT IT
-            </h2>
-            <div className="space-y-6">
-              <div className="reveal flex gap-4 card-stripe p-5 rounded-xl">
-                <div className="shrink-0 p-3 bg-brand-600 text-white rounded-xl h-fit shadow-lg shadow-brand-600/25">
+            <SectionHeader
+              align="left"
+              label="Our Promise"
+              title="Why clients keep working with us"
+              subtitle="We focus on quality, clear communication, and software you can depend on every day."
+              className="mb-8"
+            />
+
+            <div className="space-y-5">
+              <div className="reveal flex gap-4 card-stripe p-5 rounded-2xl">
+                <div className="shrink-0 p-3 bg-brand-600 text-white rounded-2xl h-fit">
                   <Shield className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-h3 dark:text-white mb-2">Uncompromising Security</h4>
-                  <p className="text-body-sm text-slate-600 dark:text-slate-400">
-                    Security is at our core. We build systems with encrypted data, secure
-                    authentication, and protection against common vulnerabilities.
+                  <h4 className="text-h3 mb-2">Secure by Design</h4>
+                  <p className="text-body-sm">
+                    Your data and your customers&apos; data matter. We build with security in mind
+                    from the start.
                   </p>
                 </div>
               </div>
-              <div
-                className="reveal flex gap-4 card-stripe p-5 rounded-xl"
-                style={{ transitionDelay: '100ms' }}
-              >
-                <div className="shrink-0 p-3 bg-brand-600 text-white rounded-xl h-fit shadow-lg shadow-brand-600/25">
+              <div className="reveal flex gap-4 card-stripe p-5 rounded-2xl" style={{ transitionDelay: '100ms' }}>
+                <div className="shrink-0 p-3 bg-brand-600 text-white rounded-2xl h-fit">
                   <Zap className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-h3 dark:text-white mb-2">High Performance</h4>
-                  <p className="text-body-sm text-slate-600 dark:text-slate-400">
-                    Our code is optimized for speed and efficiency, ensuring minimal latency even
-                    under high load.
+                  <h4 className="text-h3 mb-2">Fast & Reliable</h4>
+                  <p className="text-body-sm">
+                    Nobody likes slow software. We optimize for speed so your users have a smooth
+                    experience.
                   </p>
                 </div>
               </div>
@@ -50,7 +52,7 @@ const Support = () => {
                 key={stat.label}
                 value={stat.value}
                 label={stat.label}
-                className={index % 2 === 1 ? 'mt-8' : ''}
+                className={index % 2 === 1 ? 'mt-6' : ''}
                 animate={!stat.value.includes('/')}
               />
             ))}
