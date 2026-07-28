@@ -6,6 +6,7 @@ const SectionHeader = ({
   subtitle,
   align = 'center',
   className = '',
+  subtitleClassName = '',
 }) => {
   const alignClass =
     align === 'left' ? 'text-left max-w-2xl' : 'text-center max-w-2xl mx-auto';
@@ -14,7 +15,9 @@ const SectionHeader = ({
     <div className={`reveal mb-12 lg:mb-14 ${alignClass} ${className}`}>
       {label && <p className="section-label mb-3">{label}</p>}
       <h2 className="text-h2 text-slate-800 mb-4">{title}</h2>
-      {subtitle && <p className="text-body text-slate-600">{subtitle}</p>}
+      {subtitle && (
+        <p className={`text-body text-slate-600 ${subtitleClassName}`}>{subtitle}</p>
+      )}
     </div>
   );
 };
