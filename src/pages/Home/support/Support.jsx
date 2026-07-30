@@ -7,7 +7,7 @@ import SectionHeader from '../../../components/shared/SectionHeader/SectionHeade
 const Support = () => {
   return (
     <section className="section-shell section-alt">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div className="reveal-left">
             <SectionHeader

@@ -9,7 +9,7 @@ const SectionHeader = ({
   subtitleClassName = '',
 }) => {
   const alignClass =
-    align === 'left' ? 'text-left max-w-2xl' : 'text-center max-w-2xl mx-auto';
+    align === 'left' ? 'text-left max-w-7xl' : 'text-center max-w-7xl mx-auto';
 
   return (
     <div className={`reveal mb-12 lg:mb-14 ${alignClass} ${className}`}>

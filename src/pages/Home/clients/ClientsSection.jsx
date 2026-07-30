@@ -21,12 +21,12 @@ const ClientsSection = () => {
         }}
       />
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <SectionHeader
           label="Our Clients"
           title="Brands we've built for"
           subtitle="Real projects, real businesses — from completed stores to systems still in development."
-          className="max-w-5xl"
+          className="max-w-7xl"
           subtitleClassName="max-w-none text-lg leading-8 text-slate-500"
         />
 

@@ -34,7 +34,7 @@ const AboutUs = () => {
 
   return (
     <section className="section-shell section-alt">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
           label="Why Work With Us"
           title="A team that cares about your outcome"

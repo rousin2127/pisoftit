@@ -58,7 +58,7 @@ const Services = () => {
       />
 
       <div className="py-16 lg:py-24 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
             {services.map((service, index) => {
               const Icon = getServiceIcon(service.icon);

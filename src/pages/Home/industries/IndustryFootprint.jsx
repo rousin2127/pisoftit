@@ -84,12 +84,12 @@ const IndustryFootprint = () => {
         id="industry-particles-js"
         className="absolute inset-0 z-0 transition-colors duration-500 bg-gradient-to-tr from-[#e3f2fd] via-[#90caf9] to-[#64b5f6]"
       />
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <SectionHeader
           label="Industries We Serve"
           title="Software for every kind of business"
           subtitle="At PaiSoft IT, we specialize in providing industry-standard tailored software solutions designed to meet the unique needs of diverse sectors. Our expert team combines deep industry knowledge with cutting-edge technology to deliver customized applications that enhance efficiency, streamline operations, and drive innovation. We are committed to helping businesses succeed in today’s dynamic landscape."
-          className="max-w-5xl"
+          className="max-w-7xl"
           subtitleClassName="max-w-none text-lg leading-8 text-slate-500"
         />
 

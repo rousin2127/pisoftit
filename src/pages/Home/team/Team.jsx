@@ -55,7 +55,7 @@ const Team = () => {
   return (
     <section className="bg-white dark:bg-slate-950 py-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         
         {/* বাম পাশের ইমেজ সেকশন */}
         <div className="lg:col-span-5 relative reveal-left">

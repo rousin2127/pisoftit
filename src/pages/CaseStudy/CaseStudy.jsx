@@ -32,7 +32,7 @@ const CaseStudy = () => {
       />
 
       <div className="py-16 lg:py-24">
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="reveal space-y-8">
             <div className="flex flex-wrap items-center gap-3">
               <span className="text-sm text-slate-500">Status</span>

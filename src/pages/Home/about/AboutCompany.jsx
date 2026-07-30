@@ -26,7 +26,7 @@ const AboutCompany = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6 space-y-6 reveal-left">
           <p className="section-label">About PAISOFT IT</p>
 
@@ -35,7 +35,7 @@ const AboutCompany = () => {
             <span className="gradient-text">actually works</span>
           </h2>
 
-          <p className="text-lg leading-8 text-slate-700 max-w-2xl">
+          <p className="text-lg leading-8 text-slate-700 max-w-7xl">
             We&apos;re a team of developers, designers, and problem-solvers. For over
             10 years, we&apos;ve helped businesses turn their ideas into reliable software — from
             clothing brands going online to shops needing custom systems.

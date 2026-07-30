@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
       />
 
       <div className="py-16 lg:py-24">
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="space-y-10">
             {sections.map((section) => (
               <section key={section.title} className="reveal">

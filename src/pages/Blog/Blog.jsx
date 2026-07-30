@@ -40,7 +40,7 @@ const Blog = () => {
       />
 
       <div className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-6 space-y-6">
+        <div className="max-w-7xl mx-auto px-6 space-y-6">
           {posts.map((post) => (
             <article
               key={post.id}

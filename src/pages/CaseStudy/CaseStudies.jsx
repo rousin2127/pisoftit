@@ -32,7 +32,7 @@ const CaseStudies = () => {
       />
 
       <div className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap gap-3 mb-10">
             {categories.map((cat) => (
               <button

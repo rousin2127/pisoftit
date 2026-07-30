@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   const linkClass = ({ isActive }) =>
-    `text-sm font-medium transition-colors ${
+    `text-lg font-medium transition-colors ${
       isActive ? 'text-brand-600' : 'text-slate-600 hover:text-brand-600'
     }`;
 
@@ -52,7 +52,7 @@ const Navbar = () => {
           : 'bg-white/80 border-b border-transparent backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
         <Link to="/" onClick={closeMobile} className="flex items-center group shrink-0">
           <div className="transition-transform duration-300 group-hover:scale-105">
             <Logo compact />
@@ -69,7 +69,7 @@ const Navbar = () => {
                     type="button"
                     onClick={() => setServicesOpen((open) => !open)}
                     onMouseEnter={() => setServicesOpen(true)}
-                    className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${
+                    className={`inline-flex items-center gap-1 text-lg font-medium transition-colors ${
                       servicesActive ? 'text-brand-600' : 'text-slate-600 hover:text-brand-600'
                     }`}
                     aria-expanded={servicesOpen}

@@ -20,7 +20,7 @@ const Home = () => {
 
       <section className="section-shell section-white">
         <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionHeader
             label="What We Do"
             title={
@@ -66,7 +66,7 @@ const Home = () => {
       <Team />
 
       <section className="section-shell cta-gradient">
-        <div className="max-w-3xl mx-auto px-6 text-center reveal">
+        <div className="max-w-7xl mx-auto px-6 text-center reveal">
           <h2 className="text-h2 text-white mb-4">Have a project in mind?</h2>
           <p className="text-body text-blue-100 mb-8">
             Tell us what you&apos;re trying to build. We&apos;ll give you honest advice and a clear
