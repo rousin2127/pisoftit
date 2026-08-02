@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import slideOneImg from '../../../assets/h1.png';
-import slideTwoImg from '../../../assets/h2.png';
+import slideTwoImg from '../../../assets/h3.png';
 
 const slides = [
   {
