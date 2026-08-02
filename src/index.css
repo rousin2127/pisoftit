@@ -236,6 +236,44 @@ body {
   50% { transform: translateY(-8px); }
 }
 
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroImageIn {
+  from {
+    opacity: 0;
+    transform: translateX(28px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroCopyIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-copy-item {
+  opacity: 0;
+  animation: heroCopyIn 0.9s ease forwards;
+}
+
 .grid-pattern {
   background-image:
     linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
