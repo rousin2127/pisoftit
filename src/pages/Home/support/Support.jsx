@@ -13,7 +13,11 @@ const Support = () => {
             <SectionHeader
               align="left"
               label="Our Promise"
-              title="Why clients keep working with us"
+              title={
+                <>
+                  Why clients <span className="gradient-text">keep working with us</span>
+                </>
+              }
               subtitle="We focus on quality, clear communication, and software you can depend on every day."
               className="mb-8"
             />
@@ -24,7 +28,9 @@ const Support = () => {
                   <Shield className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-h3 mb-2">Secure by Design</h4>
+                  <h4 className="text-h3 mb-2">
+                    <span className="gradient-text">Secure</span> by Design
+                  </h4>
                   <p className="text-body-sm">
                     Your data and your customers&apos; data matter. We build with security in mind
                     from the start.
@@ -36,7 +42,9 @@ const Support = () => {
                   <Zap className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-h3 mb-2">Fast & Reliable</h4>
+                  <h4 className="text-h3 mb-2">
+                    <span className="gradient-text">Fast</span> &amp; Reliable
+                  </h4>
                   <p className="text-body-sm">
                     Nobody likes slow software. We optimize for speed so your users have a smooth
                     experience.

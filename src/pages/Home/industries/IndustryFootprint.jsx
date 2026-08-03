@@ -87,7 +87,11 @@ const IndustryFootprint = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <SectionHeader
           label="Industries We Serve"
-          title="Software for every kind of business"
+          title={
+            <>
+              Software for <span className="gradient-text">every kind of business</span>
+            </>
+          }
           subtitle="At PaiSoft IT, we specialize in providing industry-standard tailored software solutions designed to meet the unique needs of diverse sectors. Our expert team combines deep industry knowledge with cutting-edge technology to deliver customized applications that enhance efficiency, streamline operations, and drive innovation. We are committed to helping businesses succeed in today’s dynamic landscape."
           className="max-w-7xl"
           subtitleClassName="max-w-none text-lg leading-8 text-slate-500"

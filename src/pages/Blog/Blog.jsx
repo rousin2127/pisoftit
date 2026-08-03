@@ -5,21 +5,33 @@ import PageHero from '../../components/shared/PageHero/PageHero';
 const posts = [
   {
     id: 1,
-    title: 'Building Reliable Web Applications',
+    title: (
+      <>
+        Building <span className="gradient-text">Reliable</span> Web Applications
+      </>
+    ),
     date: 'July 2026',
     excerpt:
       'How we approach architecture, security, and performance when delivering production-ready web apps for growing businesses.',
   },
   {
     id: 2,
-    title: 'E-commerce Trends for Bangladesh Brands',
+    title: (
+      <>
+        E-commerce Trends for <span className="gradient-text">Bangladesh Brands</span>
+      </>
+    ),
     date: 'June 2026',
     excerpt:
       'Practical insights on storefront UX, checkout conversion, and inventory workflows for local retail brands going online.',
   },
   {
     id: 3,
-    title: 'Why Custom Software Beats One-Size Templates',
+    title: (
+      <>
+        Why <span className="gradient-text">Custom Software</span> Beats One-Size Templates
+      </>
+    ),
     date: 'May 2026',
     excerpt:
       'When off-the-shelf tools fall short — and how tailored software creates long-term operational advantage.',

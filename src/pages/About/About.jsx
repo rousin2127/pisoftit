@@ -8,7 +8,11 @@ const About = () => {
     <div>
       <PageHero
         label="About Us"
-        title="Engineering Reliability Since Inception."
+        title={
+          <>
+            Engineering <span className="text-blue-300">Reliability</span> Since Inception.
+          </>
+        }
         subtitle="PAISOFT IT was founded with a clear mission: to bridge the gap between complex business challenges and elegant software solutions. We serve clients globally with a focus on enterprise stability and innovation."
       />
 
@@ -24,14 +28,18 @@ const About = () => {
             </div>
             <div className="space-y-8 reveal">
               <div>
-                <h3 className="text-h3 dark:text-white mb-3">Our Vision</h3>
+                <h3 className="text-h3 dark:text-white mb-3">
+                  Our <span className="gradient-text">Vision</span>
+                </h3>
                 <p className="text-body text-slate-600 dark:text-slate-400">
                   To be the most trusted technology partner for businesses undergoing digital
                   transformation, known for building systems that never fail.
                 </p>
               </div>
               <div>
-                <h3 className="text-h3 dark:text-white mb-3">Our Core Values</h3>
+                <h3 className="text-h3 dark:text-white mb-3">
+                  Our <span className="gradient-text">Core Values</span>
+                </h3>
                 <ul className="space-y-4">
                   <li className="flex gap-4">
                     <div className="w-1.5 h-1.5 bg-brand-600 rounded-full mt-2.5 shrink-0" />
@@ -60,7 +68,9 @@ const About = () => {
           </div>
 
           <div className="card-highlight rounded-2xl p-10 lg:p-16 text-center reveal">
-            <h2 className="text-h2 dark:text-white mb-4">Need a reliable tech partner?</h2>
+            <h2 className="text-h2 dark:text-white mb-4">
+              Need a <span className="gradient-text">reliable tech partner</span>?
+            </h2>
             <p className="text-body text-slate-600 dark:text-slate-400 mb-6 max-w-xl mx-auto">
               We are always open to discussing new projects, creative ideas or opportunities to be
               part of your visions.

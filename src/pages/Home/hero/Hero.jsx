@@ -8,7 +8,12 @@ const slides = [
   {
     id: 1,
     image: slideOneImg,
-    heading: 'We build software that helps your business run better',
+    heading: (
+      <>
+        We build software that helps your business{' '}
+        <span className="gradient-text">run better</span>
+      </>
+    ),
     points: [
       'Custom web & mobile apps tailored to your workflow',
       'Secure, scalable systems built for long-term growth',
@@ -19,7 +24,12 @@ const slides = [
   {
     id: 2,
     image: slideTwoImg,
-    heading: 'Next-Gen Software Solutions for Enterprises & Government',
+    heading: (
+      <>
+        <span className="gradient-text">Next-Gen</span> Software Solutions for Enterprises &amp;
+        Government
+      </>
+    ),
     points: [
       'E-commerce, POS, ERP, and corporate websites',
       'Modern UI with performance-focused engineering',

@@ -59,7 +59,7 @@ const CaseStudy = () => {
 
             <div className="card-highlight text-center mt-10 rounded-2xl py-12 px-6">
               <h2 className="text-h2 text-slate-900 dark:text-white mb-4">
-                Have a similar project in mind?
+                Have a <span className="gradient-text">similar project</span> in mind?
               </h2>
               <Link
                 to="/contact"

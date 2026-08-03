@@ -93,9 +93,12 @@ const Services = () => {
 
           <div className="card-highlight rounded-3xl p-10 lg:p-16 reveal-scale">
             <div className="text-center mb-12">
-              <h2 className="text-h2 dark:text-white mb-4">Our Engineering Process</h2>
+              <h2 className="text-h2 dark:text-white mb-4">
+                Our <span className="gradient-text">Engineering Process</span>
+              </h2>
               <p className="text-body text-slate-600 dark:text-slate-400">
-                How we turn complex requirements into reliable products.
+                How we turn complex requirements into{' '}
+                <span className="font-semibold text-brand-600">reliable products</span>.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">

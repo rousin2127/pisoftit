@@ -67,7 +67,9 @@ const Home = () => {
 
       <section className="section-shell cta-gradient">
         <div className="max-w-7xl mx-auto px-6 text-center reveal">
-          <h2 className="text-h2 text-white mb-4">Have a project in mind?</h2>
+          <h2 className="text-h2 text-white mb-4">
+            Have a <span className="text-blue-200">project in mind</span>?
+          </h2>
           <p className="text-body text-blue-100 mb-8">
             Tell us what you&apos;re trying to build. We&apos;ll give you honest advice and a clear
             path forward — no pressure, no jargon.

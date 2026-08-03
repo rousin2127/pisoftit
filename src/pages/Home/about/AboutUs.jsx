@@ -8,7 +8,11 @@ const AboutUs = () => {
   const features = [
     {
       id: 1,
-      title: 'Built to Last',
+      title: (
+        <>
+          Built to <span className="gradient-text">Last</span>
+        </>
+      ),
       description:
         'We write clean, secure code so your software stays stable long after launch — not just on day one.',
       icon: securityIcon,
@@ -16,7 +20,11 @@ const AboutUs = () => {
     },
     {
       id: 2,
-      title: 'Grows With You',
+      title: (
+        <>
+          Grows <span className="gradient-text">With You</span>
+        </>
+      ),
       description:
         'Start small or go big. We design systems that can grow as your business expands.',
       icon: scrutinyIcon,
@@ -24,7 +32,11 @@ const AboutUs = () => {
     },
     {
       id: 3,
-      title: 'We Stay Available',
+      title: (
+        <>
+          We Stay <span className="gradient-text">Available</span>
+        </>
+      ),
       description:
         'Questions after launch? Need a fix or update? Our team is here when you need us.',
       icon: telephoneIcon,
@@ -37,7 +49,11 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
           label="Why Work With Us"
-          title="A team that cares about your outcome"
+          title={
+            <>
+              A team that cares about <span className="gradient-text">your outcome</span>
+            </>
+          }
           subtitle="We don't just deliver code — we help you solve real business problems with software that works."
         />
 

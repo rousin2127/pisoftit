@@ -11,12 +11,21 @@ const PageHero = ({ label, title, subtitle, children }) => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/75 via-slate-900/55 to-slate-900/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/40" />
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl reveal">
-          {label && <p className="section-label mb-4 text-blue-200">{label}</p>}
-          <h1 className="text-h1 text-white mb-4">{title}</h1>
-          {subtitle && <p className="text-body text-blue-50/90 max-w-7xl">{subtitle}</p>}
+          {label && (
+            <p className="inline-flex items-center gap-2 text-xl font-semibold uppercase tracking-[0.15em] text-white mb-4">
+              <span className="inline-block w-5 h-0.5 rounded-sm bg-white" />
+              {label}
+            </p>
+          )}
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.15] text-white mb-4">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="text-base sm:text-lg leading-relaxed text-white/90 max-w-7xl">{subtitle}</p>
+          )}
           {children}
         </div>
       </div>

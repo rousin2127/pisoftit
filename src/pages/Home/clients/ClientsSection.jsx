@@ -24,7 +24,11 @@ const ClientsSection = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <SectionHeader
           label="Our Clients"
-          title="Brands we've built for"
+          title={
+            <>
+              Brands we&apos;ve <span className="gradient-text">built for</span>
+            </>
+          }
           subtitle="Real projects, real businesses — from completed stores to systems still in development."
           className="max-w-7xl"
           subtitleClassName="max-w-none text-lg leading-8 text-slate-500"

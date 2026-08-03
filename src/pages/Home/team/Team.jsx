@@ -72,7 +72,7 @@ const Team = () => {
         <div className="lg:col-span-7 flex flex-col justify-center reveal-right">
           <p className="section-label mb-3">Our Team</p>
           <h2 className="text-h2 text-slate-900 dark:text-white mb-8">
-            Meet the people behind PAISOFT IT
+            Meet the people behind <span className="gradient-text">PAISOFT IT</span>
           </h2>
           
           {/* মেম্বার লিস্ট */}

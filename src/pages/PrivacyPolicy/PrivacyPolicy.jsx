@@ -39,7 +39,11 @@ const PrivacyPolicy = () => {
     <div>
       <PageHero
         label="Legal"
-        title="Privacy Policy"
+        title={
+          <>
+            <span className="text-blue-300">Privacy</span> Policy
+          </>
+        }
         subtitle={`Effective date: ${new Date().getFullYear()}. This policy explains how ${siteConfig.name} collects, uses, and protects your information when you visit paisoftit.com.`}
       />
 

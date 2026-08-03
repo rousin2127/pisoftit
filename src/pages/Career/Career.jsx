@@ -41,7 +41,9 @@ const Career = () => {
       <div className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 reveal">
-            <h2 className="text-h2 text-slate-900 dark:text-white mb-4">Open Positions</h2>
+            <h2 className="text-h2 text-slate-900 dark:text-white mb-4">
+              <span className="gradient-text">Open Positions</span>
+            </h2>
             <p className="text-body text-slate-600 dark:text-slate-400">
               Interested in joining us? Browse current openings or send your CV to{' '}
               <a
@@ -84,7 +86,7 @@ const Career = () => {
 
           <div className="text-center reveal card-highlight rounded-2xl py-12 px-6">
             <h2 className="text-h2 text-slate-900 dark:text-white mb-4">
-              Don&apos;t see the right role?
+              Don&apos;t see the <span className="gradient-text">right role</span>?
             </h2>
             <p className="text-body text-slate-600 dark:text-slate-400 mb-6 max-w-xl mx-auto">
               We are always open to talented people. Send your portfolio and tell us how you want to
